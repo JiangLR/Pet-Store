@@ -1,0 +1,85 @@
+package cn.edu.zucc.pet_service.model;
+
+import javax.persistence.*;
+import java.util.Objects;
+
+/**
+ * @Author JiangLR
+ * @Time 2018-08-31 21:56
+ */
+@Entity
+@Table(name = "staff_info", schema = "pet_store", catalog = "")
+public class StaffEntity {
+    private int staffId;
+    private String staffName;
+    private String staffRank;
+    private String staffAccount;
+    private String staffPwd;
+
+    @Id
+    @Column(name = "staff_id")
+    public int getStaffId() {
+        return staffId;
+    }
+
+    public void setStaffId(int staffId) {
+        this.staffId = staffId;
+    }
+
+    @Basic
+    @Column(name = "staff_name")
+    public String getStaffName() {
+        return staffName;
+    }
+
+    public void setStaffName(String staffName) {
+        this.staffName = staffName;
+    }
+
+    @Basic
+    @Column(name = "staff_rank")
+    public String getStaffRank() {
+        return staffRank;
+    }
+
+    public void setStaffRank(String staffRank) {
+        this.staffRank = staffRank;
+    }
+
+    @Basic
+    @Column(name = "staff_account")
+    public String getStaffAccount() {
+        return staffAccount;
+    }
+
+    public void setStaffAccount(String staffAccount) {
+        this.staffAccount = staffAccount;
+    }
+
+    @Basic
+    @Column(name = "staff_pwd")
+    public String getStaffPwd() {
+        return staffPwd;
+    }
+
+    public void setStaffPwd(String staffPwd) {
+        this.staffPwd = staffPwd;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        StaffEntity that = (StaffEntity) o;
+        return staffId == that.staffId &&
+                Objects.equals(staffName, that.staffName) &&
+                Objects.equals(staffRank, that.staffRank) &&
+                Objects.equals(staffAccount, that.staffAccount) &&
+                Objects.equals(staffPwd, that.staffPwd);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(staffId, staffName, staffRank, staffAccount, staffPwd);
+    }
+}

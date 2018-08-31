@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="cn.edu.zucc.pet_service.model.GoodsOrderREntity" table="goods_order_r" schema="pet_store">
+        <id name="serviceAppointmentR" column="service_appointment_r"/>
+    </class>
+</hibernate-mapping>

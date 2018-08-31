@@ -5,10 +5,10 @@ import java.util.Objects;
 
 /**
  * @Author JiangLR
- * @Time 2018-08-31 15:35
+ * @Time 2018-08-31 21:56
  */
 @Entity
-@Table(name = "brands", schema = "pet_service", catalog = "")
+@Table(name = "brands", schema = "pet_store", catalog = "")
 public class BrandsEntity {
     private int brandsId;
     private String brandsName;
@@ -44,7 +44,6 @@ public class BrandsEntity {
 
     @Override
     public int hashCode() {
-
         return Objects.hash(brandsId, brandsName);
     }
 }

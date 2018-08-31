@@ -5,10 +5,10 @@ import java.util.Objects;
 
 /**
  * @Author JiangLR
- * @Time 2018-08-31 15:35
+ * @Time 2018-08-31 21:56
  */
 @Entity
-@Table(name = "goods_race", schema = "pet_service", catalog = "")
+@Table(name = "goods_race", schema = "pet_store", catalog = "")
 public class GoodsRaceEntity {
     private int raceId;
     private String raceName;
@@ -56,7 +56,6 @@ public class GoodsRaceEntity {
 
     @Override
     public int hashCode() {
-
         return Objects.hash(raceId, raceName, raceDescribe);
     }
 }

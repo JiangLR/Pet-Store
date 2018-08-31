@@ -4,7 +4,7 @@
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 
-    <class name="cn.edu.zucc.pet_service.model.PhotosEntity" table="photos" schema="pet_service">
+    <class name="cn.edu.zucc.pet_service.model.PhotosEntity" table="photos" schema="pet_store">
         <id name="photoId" column="photo_id"/>
         <property name="imgSrc" column="img_src"/>
     </class>

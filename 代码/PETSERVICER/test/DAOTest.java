@@ -1,4 +1,5 @@
-import cn.edu.zucc.pet_service.model.MasterInfoEntity;
+import cn.edu.zucc.pet_service.model.MasterEntity;
+import cn.edu.zucc.pet_service.util.HibernateUtil;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -11,22 +12,18 @@ import org.junit.Test;
  * @Time 2018-08-31 16:16
  */
 public class DAOTest {
-    Configuration config = null;
-    SessionFactory sessionFactory = null;
     Session session = null;
     Transaction tx = null;
 
     @Before
     public void init() {
-        config = new Configuration().configure("/hibernate.cfg.xml");
-        sessionFactory = config.buildSessionFactory();
-        session = sessionFactory.openSession();
+        session = HibernateUtil.openSession();
         tx = session.beginTransaction();
     }
 
     @Test
     public void insert() {
-        MasterInfoEntity master1 = new MasterInfoEntity();
+        MasterEntity master1 = new MasterEntity();
         master1.setMasterName("jianglr");
         master1.setMasterSex("male");
         master1.setMasterTel("13588899791");
