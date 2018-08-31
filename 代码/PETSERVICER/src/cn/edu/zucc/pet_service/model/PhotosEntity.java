@@ -1,4 +1,4 @@
-package cn.edu.zucc.model;
+package cn.edu.zucc.pet_service.model;
 
 import javax.persistence.*;
 import java.util.Objects;
