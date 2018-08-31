@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="cn.edu.zucc.model.AppointmentInfoEntity" table="appointment_info" schema="pet_service">
+        <id name="appointmentId" column="appointment_id"/>
+        <property name="appointmentPetId" column="appointment_pet_id"/>
+        <property name="appointmentStart" column="appointment_start"/>
+        <property name="appointmentFinish" column="appointment_finish"/>
+        <property name="appointmentStatus" column="appointment_status"/>
+    </class>
+</hibernate-mapping>

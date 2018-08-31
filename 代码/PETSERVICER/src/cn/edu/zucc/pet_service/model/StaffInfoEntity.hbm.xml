@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="cn.edu.zucc.model.StaffInfoEntity" table="staff_info" schema="pet_service">
+        <id name="staffId" column="staff_id"/>
+        <property name="staffName" column="staff_name"/>
+        <property name="staffRank" column="staff_rank"/>
+        <property name="staffPw" column="staff_pw"/>
+    </class>
+</hibernate-mapping>
