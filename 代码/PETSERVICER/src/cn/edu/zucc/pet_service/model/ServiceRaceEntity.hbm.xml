@@ -5,7 +5,9 @@
 <hibernate-mapping>
 
     <class name="cn.edu.zucc.pet_service.model.ServiceRaceEntity" table="service_race" schema="pet_service">
-        <id name="serviceId" column="service_id"/>
+        <id name="serviceId" column="service_id">
+            <generator class="increment"/>
+        </id>
         <property name="serviceName" column="service_name"/>
         <property name="serviceDescribe" column="service_describe"/>
         <property name="servicePrice" column="service_price"/>
