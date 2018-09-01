@@ -6,7 +6,6 @@
 
     <class name="cn.edu.zucc.pet_service.model.AppointmentEntity" table="appointment_info" schema="pet_service">
         <id name="appointmentId" column="appointment_id"/>
-        <property name="appointmentPetId" column="appointment_pet_id"/>
         <property name="appointmentStart" column="appointment_start"/>
     </class>
 </hibernate-mapping>

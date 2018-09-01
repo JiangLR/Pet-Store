@@ -8,7 +8,7 @@ import java.util.Objects;
  * @Time 2018-08-31 21:56
  */
 @Entity
-@Table(name = "photos", schema = "pet_store", catalog = "")
+@Table(name = "photos", schema = "pet_service", catalog = "")
 public class PhotosEntity {
     private int photoId;
     private String imgSrc;

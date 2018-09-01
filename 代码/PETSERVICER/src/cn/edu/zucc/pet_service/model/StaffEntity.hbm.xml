@@ -4,7 +4,7 @@
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 
-    <class name="cn.edu.zucc.pet_service.model.StaffEntity" table="staff_info" schema="pet_store">
+    <class name="cn.edu.zucc.pet_service.model.StaffEntity" table="staff_info" schema="pet_service">
         <id name="staffId" column="staff_id"/>
         <property name="staffName" column="staff_name"/>
         <property name="staffRank" column="staff_rank"/>

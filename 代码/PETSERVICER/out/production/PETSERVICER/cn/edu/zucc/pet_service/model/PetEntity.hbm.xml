@@ -9,7 +9,7 @@
         <property name="petName" column="pet_name"/>
         <property name="petNickname" column="pet_nickname"/>
         <property name="petSex" column="pet_sex"/>
-        <property name="petMaster" column="pet_master"/>
         <property name="petRace" column="pet_race"/>
+        <many-to-one name="master" column="master_id" class="cn.edu.zucc.pet_service.model.MasterEntity"/>
     </class>
 </hibernate-mapping>

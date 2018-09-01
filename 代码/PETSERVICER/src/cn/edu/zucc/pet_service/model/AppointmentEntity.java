@@ -9,7 +9,7 @@ import java.util.Objects;
  * @Time 2018-08-31 21:56
  */
 @Entity
-@Table(name = "appointment_info", schema = "pet_store", catalog = "")
+@Table(name = "appointment_info", schema = "pet_service", catalog = "")
 public class AppointmentEntity {
     private int appointmentId;
     private Date appointmentStart;

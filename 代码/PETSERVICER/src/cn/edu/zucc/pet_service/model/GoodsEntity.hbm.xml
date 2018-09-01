@@ -4,7 +4,7 @@
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 
-    <class name="cn.edu.zucc.pet_service.model.GoodsEntity" table="goods_info" schema="pet_store">
+    <class name="cn.edu.zucc.pet_service.model.GoodsEntity" table="goods_info" schema="pet_service">
         <id name="goodsId" column="goods_id"/>
         <property name="goodsName" column="goods_name"/>
         <property name="goodsPrice" column="goods_price"/>

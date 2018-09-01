@@ -16,24 +16,38 @@
         <property name="show_sql">true</property>
         <!-- format_sql: 打印sql语句前,会将sql语句先格式化  -->
         <property name="format_sql">true</property>
+        <!--<property name="hbm2ddl.auto">create</property>-->
         <!-- 数据库方言配置 org.hibernate.dialect.MySQLDialect (选择最短的)-->
         <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
         <!-- hibernate.connection.autocommit: 事务自动提交  -->
         <property name="hibernate.connection.autocommit">true</property>
         <!-- 将Session与线程绑定=> 只有配置了该配置,才能使用getCurrentSession -->
         <property name="hibernate.current_session_context_class">thread</property>
-        <!-- 引入ORM 映射文件 填写src之后的路径 -->
         <mapping resource="cn/edu/zucc/pet_service/model/AppointmentEntity.hbm.xml"/>
+        <mapping class="cn.edu.zucc.pet_service.model.AppointmentEntity"/>
+        <mapping class="cn.edu.zucc.pet_service.model.BrandsEntity"/>
         <mapping resource="cn/edu/zucc/pet_service/model/BrandsEntity.hbm.xml"/>
+        <mapping class="cn.edu.zucc.pet_service.model.GoodsEntity"/>
         <mapping resource="cn/edu/zucc/pet_service/model/GoodsEntity.hbm.xml"/>
+        <mapping class="cn.edu.zucc.pet_service.model.GoodsOrderEntity"/>
         <mapping resource="cn/edu/zucc/pet_service/model/GoodsOrderEntity.hbm.xml"/>
         <mapping resource="cn/edu/zucc/pet_service/model/GoodsOrderREntity.hbm.xml"/>
+        <mapping class="cn.edu.zucc.pet_service.model.GoodsOrderREntity"/>
+        <mapping class="cn.edu.zucc.pet_service.model.GoodsRaceEntity"/>
         <mapping resource="cn/edu/zucc/pet_service/model/GoodsRaceEntity.hbm.xml"/>
+        <mapping class="cn.edu.zucc.pet_service.model.MasterEntity"/>
         <mapping resource="cn/edu/zucc/pet_service/model/MasterEntity.hbm.xml"/>
-        <mapping resource="cn/edu/zucc/pet_service/model/PetInfoEntity.hbm.xml"/>
+        <mapping class="cn.edu.zucc.pet_service.model.PetEntity"/>
+        <mapping resource="cn/edu/zucc/pet_service/model/PetEntity.hbm.xml"/>
+        <mapping class="cn.edu.zucc.pet_service.model.PhotosEntity"/>
         <mapping resource="cn/edu/zucc/pet_service/model/PhotosEntity.hbm.xml"/>
+        <mapping class="cn.edu.zucc.pet_service.model.ServiceAppointmentREntity"/>
         <mapping resource="cn/edu/zucc/pet_service/model/ServiceAppointmentREntity.hbm.xml"/>
+        <mapping class="cn.edu.zucc.pet_service.model.ServiceRaceEntity"/>
         <mapping resource="cn/edu/zucc/pet_service/model/ServiceRaceEntity.hbm.xml"/>
+        <mapping class="cn.edu.zucc.pet_service.model.StaffEntity"/>
         <mapping resource="cn/edu/zucc/pet_service/model/StaffEntity.hbm.xml"/>
+        <!-- 引入ORM 映射文件 填写src之后的路径 -->
+
     </session-factory>
 </hibernate-configuration>

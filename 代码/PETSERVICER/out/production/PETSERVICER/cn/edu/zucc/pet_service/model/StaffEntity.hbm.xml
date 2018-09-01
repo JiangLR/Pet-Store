@@ -8,6 +8,7 @@
         <id name="staffId" column="staff_id"/>
         <property name="staffName" column="staff_name"/>
         <property name="staffRank" column="staff_rank"/>
+        <property name="staffAccount" column="staff_account"/>
         <property name="staffPwd" column="staff_pwd"/>
     </class>
 </hibernate-mapping>

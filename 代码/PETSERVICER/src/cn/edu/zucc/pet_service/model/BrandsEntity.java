@@ -8,7 +8,7 @@ import java.util.Objects;
  * @Time 2018-08-31 21:56
  */
 @Entity
-@Table(name = "brands", schema = "pet_store", catalog = "")
+@Table(name = "brands", schema = "pet_service", catalog = "")
 public class BrandsEntity {
     private int brandsId;
     private String brandsName;

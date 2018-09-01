@@ -8,14 +8,14 @@ import java.util.Objects;
  * @Time 2018-08-31 21:56
  */
 @Entity
-@Table(name = "pet_info", schema = "pet_store", catalog = "")
+@Table(name = "pet_info", schema = "pet_service", catalog = "")
 public class PetEntity {
     private int petId;
     private String petName;
     private String petNickname;
     private String petSex;
-    private String petMaster;
     private String petRace;
+    private MasterEntity master;
 
     @Id
     @Column(name = "pet_id")
@@ -58,16 +58,6 @@ public class PetEntity {
     }
 
     @Basic
-    @Column(name = "pet_master")
-    public String getPetMaster() {
-        return petMaster;
-    }
-
-    public void setPetMaster(String petMaster) {
-        this.petMaster = petMaster;
-    }
-
-    @Basic
     @Column(name = "pet_race")
     public String getPetRace() {
         return petRace;
@@ -75,6 +65,14 @@ public class PetEntity {
 
     public void setPetRace(String petRace) {
         this.petRace = petRace;
+    }
+
+    public MasterEntity getMaster() {
+        return master;
+    }
+
+    public void setMaster(MasterEntity master) {
+        this.master = master;
     }
 
     @Override
@@ -86,12 +84,11 @@ public class PetEntity {
                 Objects.equals(petName, that.petName) &&
                 Objects.equals(petNickname, that.petNickname) &&
                 Objects.equals(petSex, that.petSex) &&
-                Objects.equals(petMaster, that.petMaster) &&
                 Objects.equals(petRace, that.petRace);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(petId, petName, petNickname, petSex, petMaster, petRace);
+        return Objects.hash(petId, petName, petNickname, petSex, petRace);
     }
 }
