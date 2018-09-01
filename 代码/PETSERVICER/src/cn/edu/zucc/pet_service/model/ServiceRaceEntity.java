@@ -1,7 +1,9 @@
 package cn.edu.zucc.pet_service.model;
 
 import javax.persistence.*;
+import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
 
 /**
  * @Author JiangLR
@@ -14,6 +16,7 @@ public class ServiceRaceEntity {
     private String serviceName;
     private String serviceDescribe;
     private double servicePrice;
+    private Set<ServiceAppointmentREntity> service_appointments = new HashSet<>();
 
     @Id
     @Column(name = "service_id")
@@ -53,6 +56,14 @@ public class ServiceRaceEntity {
 
     public void setServicePrice(double servicePrice) {
         this.servicePrice = servicePrice;
+    }
+
+    public Set<ServiceAppointmentREntity> getService_appointments() {
+        return service_appointments;
+    }
+
+    public void setService_appointments(Set<ServiceAppointmentREntity> service_appointment) {
+        this.service_appointments = service_appointment;
     }
 
     @Override

@@ -1,7 +1,9 @@
 package cn.edu.zucc.pet_service.model;
 
 import javax.persistence.*;
+import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
 
 /**
  * @Author JiangLR
@@ -16,6 +18,7 @@ public class PetEntity {
     private String petSex;
     private String petRace;
     private MasterEntity master;
+    private Set<AppointmentEntity> appointments = new HashSet<>();
 
     @Id
     @Column(name = "pet_id")
@@ -73,6 +76,14 @@ public class PetEntity {
 
     public void setMaster(MasterEntity master) {
         this.master = master;
+    }
+
+    public Set<AppointmentEntity> getAppointments() {
+        return appointments;
+    }
+
+    public void setAppointments(Set<AppointmentEntity> appointments) {
+        this.appointments = appointments;
     }
 
     @Override

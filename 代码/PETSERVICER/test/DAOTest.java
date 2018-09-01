@@ -1,13 +1,12 @@
-import cn.edu.zucc.pet_service.model.GoodsEntity;
-import cn.edu.zucc.pet_service.model.GoodsOrderEntity;
-import cn.edu.zucc.pet_service.model.MasterEntity;
-import cn.edu.zucc.pet_service.model.PetEntity;
+import cn.edu.zucc.pet_service.model.*;
 import cn.edu.zucc.pet_service.util.HibernateUtil;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+
+import java.sql.Date;
 
 /**
  * @Author JiangLR
@@ -71,16 +70,16 @@ public class DAOTest {
     }
 
     @Test
-    public void changePet(){
-        PetEntity pet1 = (PetEntity)session.get(PetEntity.class, 7);
-        MasterEntity master1 = (MasterEntity)session.get(MasterEntity.class, 3);
+    public void changePet() {
+        PetEntity pet1 = (PetEntity) session.get(PetEntity.class, 7);
+        MasterEntity master1 = (MasterEntity) session.get(MasterEntity.class, 3);
         pet1.setMaster(master1);
         master1.getPets().add(pet1);
         tx.commit();
     }
 
     @Test
-    public void save_goods_order(){
+    public void save_goods_order() {
         GoodsEntity goods1 = new GoodsEntity();
         goods1.setGoodsName("maoliang1");
         goods1.setGoodsPrice(20.0);
@@ -97,13 +96,13 @@ public class DAOTest {
         order1.setOrderNum(3);
         float sum = (float) (goods1.getGoodsPrice() * order1.getOrderNum());
         order1.setOrderPrice(sum);
-        order1.setOrderStatus((byte)0);
+        order1.setOrderStatus((byte) 0);
 
         GoodsOrderEntity order2 = new GoodsOrderEntity();
         order2.setOrderNum(2);
         sum = (float) (goods2.getGoodsPrice() * order2.getOrderNum());
         order2.setOrderPrice(sum);
-        order2.setOrderStatus((byte)0);
+        order2.setOrderStatus((byte) 0);
 
         goods1.getOrders().add(order1);
         goods1.getOrders().add(order2);
@@ -119,6 +118,89 @@ public class DAOTest {
         session.save(goods1);
         session.save(goods2);
 
+        tx.commit();
+    }
+
+    @Test
+    public void save_service_appointment() {
+        MasterEntity master1 = new MasterEntity();
+        master1.setMasterName("jianglr");
+        master1.setMasterSex("male");
+        master1.setMasterTel("13588899791");
+        master1.setMasterMail("1024311844@qq.com");
+
+
+        PetEntity pet1 = new PetEntity();
+        pet1.setPetName("hashiqi");
+        pet1.setPetNickname("yellow");
+        pet1.setPetRace("dog");
+        pet1.setPetSex("male");
+        pet1.setMaster(master1);
+
+//        PetEntity pet2 = new PetEntity();
+//        pet2.setPetName("hashiqi");
+//        pet2.setPetNickname("black");
+//        pet2.setPetRace("dog");
+//        pet2.setPetSex("male");
+//        pet2.setMaster(master1);
+
+        master1.getPets().add(pet1);
+//        master1.getPets().add(pet2);
+        pet1.setMaster(master1);
+//        pet2.setMaster(master1);
+        session.save(master1);
+
+    //****************************************************************************
+        AppointmentEntity appointment1 = new AppointmentEntity();
+        appointment1.setPet(pet1);
+        appointment1.setAppointmentStart(new Date(System.currentTimeMillis()));
+
+//        AppointmentEntity appointment2 = new AppointmentEntity();
+//        appointment2.setPet(pet2);
+//        appointment2.setAppointmentStart(new Date(System.currentTimeMillis()));
+
+    //****************************************************************************
+
+        ServiceRaceEntity service1 = new ServiceRaceEntity();
+        service1.setServiceName("shower");
+        service1.setServicePrice(20.0);
+        service1.setServiceDescribe("take a shower");
+
+//        ServiceRaceEntity service2 = new ServiceRaceEntity();
+//        service2.setServiceName("cut");
+//        service2.setServicePrice(30.0);
+//        service2.setServiceDescribe("cut hair");
+
+    //****************************************************************************
+
+        ServiceAppointmentREntity service_appointment1 = new ServiceAppointmentREntity();
+        service_appointment1.setFinishStatus((byte)0);
+        service_appointment1.setFinishTime(new Date(System.currentTimeMillis()));
+        service_appointment1.setAppointment(appointment1);
+        service_appointment1.setService(service1);
+
+//        ServiceAppointmentREntity service_appointment2 = new ServiceAppointmentREntity();
+//        service_appointment2.setFinishStatus((byte)0);
+//        service_appointment2.setFinishTime(new Date(System.currentTimeMillis()));
+//        service_appointment2.setAppointment(appointment1);
+//        service_appointment2.setService(service2);
+
+//        ServiceAppointmentREntity service_appointment3 = new ServiceAppointmentREntity();
+//        service_appointment3.setFinishStatus((byte)0);
+//        service_appointment3.setFinishTime(new Date(System.currentTimeMillis()));
+//        service_appointment3.setAppointment(appointment2);
+//        service_appointment3.setService(service1);
+//
+//        ServiceAppointmentREntity service_appointment4 = new ServiceAppointmentREntity();
+//        service_appointment4.setFinishStatus((byte)0);
+//        service_appointment4.setFinishTime(new Date(System.currentTimeMillis()));
+//        service_appointment4.setAppointment(appointment2);
+//        service_appointment4.setService(service2);
+
+        session.save(service_appointment1);
+//        session.save(service_appointment2);
+//        session.save(service_appointment3);
+//        session.save(service_appointment4);
         tx.commit();
     }
 }

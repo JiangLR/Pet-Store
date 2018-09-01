@@ -1,6 +1,6 @@
 /*==============================================================*/
 /* DBMS name:      MySQL 5.0                                    */
-/* Created on:     2018/9/1 13:05:11                            */
+/* Created on:     2018/9/1 21:33:31                            */
 /*==============================================================*/
 
 
@@ -34,7 +34,7 @@ drop table if exists staff_info;
 create table appointment_info
 (
    appointment_id       int not null auto_increment,
-   pet_id               int not null,
+   pet_id               int,
    appointment_start    date not null,
    primary key (appointment_id)
 );
@@ -55,8 +55,8 @@ create table brands
 create table goods_info
 (
    goods_id             int not null auto_increment,
-   brands_id            int not null,
-   race_id              int not null,
+   brands_id            int,
+   race_id              int,
    goods_name           char(50) not null,
    goods_price          float(10) not null,
    on_sale              float(10) not null,
@@ -70,7 +70,7 @@ create table goods_info
 create table goods_order
 (
    order_id             int not null auto_increment,
-   master_id            int not null,
+   master_id            int,
    order_num            int not null,
    order_price          float(10) not null,
    order_status         bool not null,
@@ -82,10 +82,10 @@ create table goods_order
 /*==============================================================*/
 create table goods_order_r
 (
-   service_appointment_r int not null auto_increment,
-   goods_id             int not null,
-   order_id             int not null,
-   primary key (service_appointment_r)
+   goods_order_id       int not null auto_increment,
+   goods_id             int,
+   order_id             int,
+   primary key (goods_order_id)
 );
 
 /*==============================================================*/
@@ -118,7 +118,7 @@ create table master_info
 create table pet_info
 (
    pet_id               int not null auto_increment,
-   master_id            int not null,
+   master_id            int,
    pet_name             char(50) not null,
    pet_nickname         char(50) not null,
    pet_sex              char(10) not null,
@@ -132,7 +132,7 @@ create table pet_info
 create table photos
 (
    photo_id             int not null auto_increment,
-   pet_id               int not null,
+   pet_id               int,
    img_src              char(100) not null,
    primary key (photo_id)
 );
@@ -142,12 +142,12 @@ create table photos
 /*==============================================================*/
 create table service_appointment_r
 (
-   service_appointment_r int not null auto_increment,
-   appointment_id       int not null,
-   service_id           int not null,
+   service_appointment_id int not null auto_increment,
+   appointment_id       int,
+   service_id           int,
    finish_status        bool not null,
-   finish_time          date not null,
-   primary key (service_appointment_r)
+   finish_time          date,
+   primary key (service_appointment_id)
 );
 
 /*==============================================================*/

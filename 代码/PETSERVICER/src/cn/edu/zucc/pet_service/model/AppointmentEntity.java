@@ -2,7 +2,9 @@ package cn.edu.zucc.pet_service.model;
 
 import javax.persistence.*;
 import java.sql.Date;
+import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
 
 /**
  * @Author JiangLR
@@ -13,6 +15,8 @@ import java.util.Objects;
 public class AppointmentEntity {
     private int appointmentId;
     private Date appointmentStart;
+    private PetEntity pet;
+    private Set<ServiceAppointmentREntity> service_appointments = new HashSet<>();
 
     @Id
     @Column(name = "appointment_id")
@@ -32,6 +36,22 @@ public class AppointmentEntity {
 
     public void setAppointmentStart(Date appointmentStart) {
         this.appointmentStart = appointmentStart;
+    }
+
+    public PetEntity getPet() {
+        return pet;
+    }
+
+    public void setPet(PetEntity pet) {
+        this.pet = pet;
+    }
+
+    public Set<ServiceAppointmentREntity> getService_appointments() {
+        return service_appointments;
+    }
+
+    public void setService_appointments(Set<ServiceAppointmentREntity> service_appointments) {
+        this.service_appointments = service_appointments;
     }
 
     @Override
