@@ -13,16 +13,16 @@ import java.util.Objects;
 @Entity
 @Table(name = "goods_order_r", schema = "pet_service", catalog = "")
 public class GoodsOrderREntity {
-    private int serviceAppointmentR;
+    private int goodsOrderR;
 
     @Id
-    @Column(name = "service_appointment_r")
+    @Column(name = "goods_order_r")
     public int getServiceAppointmentR() {
-        return serviceAppointmentR;
+        return goodsOrderR;
     }
 
-    public void setServiceAppointmentR(int serviceAppointmentR) {
-        this.serviceAppointmentR = serviceAppointmentR;
+    public void setServiceAppointmentR(int goodsOrderR) {
+        this.goodsOrderR = goodsOrderR;
     }
 
     @Override
@@ -30,11 +30,11 @@ public class GoodsOrderREntity {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         GoodsOrderREntity that = (GoodsOrderREntity) o;
-        return serviceAppointmentR == that.serviceAppointmentR;
+        return goodsOrderR == that.goodsOrderR;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(serviceAppointmentR);
+        return Objects.hash(goodsOrderR);
     }
 }

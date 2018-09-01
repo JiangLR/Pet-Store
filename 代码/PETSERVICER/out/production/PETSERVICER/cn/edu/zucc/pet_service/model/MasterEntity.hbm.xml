@@ -12,9 +12,9 @@
         <property name="masterSex" column="master_sex"/>
         <property name="masterTel" column="master_tel"/>
         <property name="masterMail" column="master_mail"/>
-        <set name="pets">
-            <key column="master_id"></key>
-            <one-to-many class="cn.edu.zucc.pet_service.model.PetEntity"></one-to-many>
+        <set name="pets" cascade="save-update, delete" inverse="true">
+            <key column="master_id"/>
+            <one-to-many class="cn.edu.zucc.pet_service.model.PetEntity"/>
         </set>
     </class>
 </hibernate-mapping>

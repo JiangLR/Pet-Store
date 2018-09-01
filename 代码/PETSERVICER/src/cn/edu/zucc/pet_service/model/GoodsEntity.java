@@ -1,7 +1,9 @@
 package cn.edu.zucc.pet_service.model;
 
 import javax.persistence.*;
+import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
 
 /**
  * @Author JiangLR
@@ -15,6 +17,7 @@ public class GoodsEntity {
     private double goodsPrice;
     private double onSale;
     private String goodsBarcode;
+    private Set<GoodsOrderEntity> orders = new HashSet<>();
 
     @Id
     @Column(name = "goods_id")
@@ -64,6 +67,14 @@ public class GoodsEntity {
 
     public void setGoodsBarcode(String goodsBarcode) {
         this.goodsBarcode = goodsBarcode;
+    }
+
+    public Set<GoodsOrderEntity> getOrders() {
+        return orders;
+    }
+
+    public void setOrders(Set<GoodsOrderEntity> orders) {
+        this.orders = orders;
     }
 
     @Override

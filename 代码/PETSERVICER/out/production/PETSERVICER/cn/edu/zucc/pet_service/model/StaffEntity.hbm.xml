@@ -5,7 +5,9 @@
 <hibernate-mapping>
 
     <class name="cn.edu.zucc.pet_service.model.StaffEntity" table="staff_info" schema="pet_service">
-        <id name="staffId" column="staff_id"/>
+        <id name="staffId" column="staff_id">
+            <generator class="increment"/>
+        </id>
         <property name="staffName" column="staff_name"/>
         <property name="staffRank" column="staff_rank"/>
         <property name="staffAccount" column="staff_account"/>

@@ -11,5 +11,9 @@
         <property name="orderNum" column="order_num"/>
         <property name="orderPrice" column="order_price"/>
         <property name="orderStatus" column="order_status"/>
+        <set name="goods" table="goods_order_r">
+            <key column="order_id"/>
+            <many-to-many class="cn.edu.zucc.pet_service.model.GoodsEntity" column="goods_id"/>
+        </set>
     </class>
 </hibernate-mapping>

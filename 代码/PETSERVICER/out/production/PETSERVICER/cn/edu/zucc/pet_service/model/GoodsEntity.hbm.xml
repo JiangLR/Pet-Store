@@ -5,10 +5,16 @@
 <hibernate-mapping>
 
     <class name="cn.edu.zucc.pet_service.model.GoodsEntity" table="goods_info" schema="pet_service">
-        <id name="goodsId" column="goods_id"/>
+        <id name="goodsId" column="goods_id">
+            <generator class="increment"/>
+        </id>
         <property name="goodsName" column="goods_name"/>
         <property name="goodsPrice" column="goods_price"/>
         <property name="onSale" column="on_sale"/>
         <property name="goodsBarcode" column="goods_barcode"/>
+        <set name="orders" table="goods_order_r" cascade="save-update" inverse="true">
+            <key column="goods_id"/>
+            <many-to-many class="cn.edu.zucc.pet_service.model.GoodsOrderEntity" column="order_id"/>
+        </set>
     </class>
 </hibernate-mapping>

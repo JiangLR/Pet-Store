@@ -5,7 +5,9 @@
 <hibernate-mapping>
 
     <class name="cn.edu.zucc.pet_service.model.PhotosEntity" table="photos" schema="pet_service">
-        <id name="photoId" column="photo_id"/>
+        <id name="photoId" column="photo_id">
+            <generator class="increment"/>
+        </id>
         <property name="imgSrc" column="img_src"/>
     </class>
 </hibernate-mapping>
