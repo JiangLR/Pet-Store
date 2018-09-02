@@ -90,6 +90,17 @@ public class GoodsEntity {
     }
 
     @Override
+    public String toString() {
+        return "GoodsEntity{" +
+                "goodsId=" + goodsId +
+                ", goodsName='" + goodsName + '\'' +
+                ", goodsPrice=" + goodsPrice +
+                ", onSale=" + onSale +
+                ", goodsBarcode='" + goodsBarcode +
+                '}';
+    }
+
+    @Override
     public int hashCode() {
         return Objects.hash(goodsId, goodsName, goodsPrice, onSale, goodsBarcode);
     }

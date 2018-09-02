@@ -2,11 +2,14 @@ import cn.edu.zucc.pet_service.model.*;
 import cn.edu.zucc.pet_service.util.HibernateUtil;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.hibernate.query.Query;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.sql.Date;
+import java.sql.Timestamp;
+import java.util.Date;
+import java.util.List;
 
 /**
  * @Author JiangLR
@@ -137,70 +140,86 @@ public class DAOTest {
         pet1.setPetSex("male");
         pet1.setMaster(master1);
 
-//        PetEntity pet2 = new PetEntity();
-//        pet2.setPetName("hashiqi");
-//        pet2.setPetNickname("black");
-//        pet2.setPetRace("dog");
-//        pet2.setPetSex("male");
-//        pet2.setMaster(master1);
+        PetEntity pet2 = new PetEntity();
+        pet2.setPetName("hashiqi");
+        pet2.setPetNickname("black");
+        pet2.setPetRace("dog");
+        pet2.setPetSex("male");
+        pet2.setMaster(master1);
 
         master1.getPets().add(pet1);
-//        master1.getPets().add(pet2);
+        master1.getPets().add(pet2);
         pet1.setMaster(master1);
-//        pet2.setMaster(master1);
+        pet2.setMaster(master1);
         session.save(master1);
 
     //****************************************************************************
         AppointmentEntity appointment1 = new AppointmentEntity();
         appointment1.setPet(pet1);
-        appointment1.setAppointmentStart(new Date(System.currentTimeMillis()));
+        appointment1.setAppointmentStart(new Timestamp(new Date().getTime()));
 
-//        AppointmentEntity appointment2 = new AppointmentEntity();
-//        appointment2.setPet(pet2);
-//        appointment2.setAppointmentStart(new Date(System.currentTimeMillis()));
+        AppointmentEntity appointment2 = new AppointmentEntity();
+        appointment2.setPet(pet2);
+        appointment2.setAppointmentStart(new Timestamp(new Date().getTime()));
 
-    //****************************************************************************
+        session.save(appointment1);
+        session.save(appointment2);
+
+        //****************************************************************************
 
         ServiceRaceEntity service1 = new ServiceRaceEntity();
         service1.setServiceName("shower");
         service1.setServicePrice(20.0);
         service1.setServiceDescribe("take a shower");
 
-//        ServiceRaceEntity service2 = new ServiceRaceEntity();
-//        service2.setServiceName("cut");
-//        service2.setServicePrice(30.0);
-//        service2.setServiceDescribe("cut hair");
+        ServiceRaceEntity service2 = new ServiceRaceEntity();
+        service2.setServiceName("cut");
+        service2.setServicePrice(30.0);
+        service2.setServiceDescribe("cut hair");
+
+        session.save(service1);
+        session.save(service2);
 
     //****************************************************************************
 
         ServiceAppointmentREntity service_appointment1 = new ServiceAppointmentREntity();
         service_appointment1.setFinishStatus((byte)0);
-        service_appointment1.setFinishTime(new Date(System.currentTimeMillis()));
         service_appointment1.setAppointment(appointment1);
         service_appointment1.setService(service1);
 
-//        ServiceAppointmentREntity service_appointment2 = new ServiceAppointmentREntity();
-//        service_appointment2.setFinishStatus((byte)0);
-//        service_appointment2.setFinishTime(new Date(System.currentTimeMillis()));
-//        service_appointment2.setAppointment(appointment1);
-//        service_appointment2.setService(service2);
+        ServiceAppointmentREntity service_appointment2 = new ServiceAppointmentREntity();
+        service_appointment2.setFinishStatus((byte)0);
+        service_appointment2.setAppointment(appointment1);
+        service_appointment2.setService(service2);
 
-//        ServiceAppointmentREntity service_appointment3 = new ServiceAppointmentREntity();
-//        service_appointment3.setFinishStatus((byte)0);
-//        service_appointment3.setFinishTime(new Date(System.currentTimeMillis()));
-//        service_appointment3.setAppointment(appointment2);
-//        service_appointment3.setService(service1);
-//
-//        ServiceAppointmentREntity service_appointment4 = new ServiceAppointmentREntity();
-//        service_appointment4.setFinishStatus((byte)0);
-//        service_appointment4.setFinishTime(new Date(System.currentTimeMillis()));
-//        service_appointment4.setAppointment(appointment2);
-//        service_appointment4.setService(service2);
+        ServiceAppointmentREntity service_appointment3 = new ServiceAppointmentREntity();
+        service_appointment3.setFinishStatus((byte)0);
+        service_appointment3.setAppointment(appointment2);
+        service_appointment3.setService(service1);
+
+        ServiceAppointmentREntity service_appointment4 = new ServiceAppointmentREntity();
+        service_appointment4.setFinishStatus((byte)0);
+        service_appointment4.setAppointment(appointment2);
+        service_appointment4.setService(service2);
 
         session.save(service_appointment1);
-//        session.save(service_appointment2);
-//        session.save(service_appointment3);
-//        session.save(service_appointment4);
+        session.save(service_appointment2);
+        session.save(service_appointment3);
+        session.save(service_appointment4);
+        tx.commit();
+    }
+
+    @Test
+    public void query_test(){
+        String hql = "from ServiceRaceEntity where servicePrice < 30";
+        Query query = session.createQuery(hql);
+//        List<ServiceRaceEntity> services = query.list();
+//        for(ServiceRaceEntity service : services){
+//            System.out.println(service.toString());
+//        }
+        ServiceRaceEntity service1 = (ServiceRaceEntity) query.uniqueResult();
+        System.out.println(service1);
+
         tx.commit();
     }
 }

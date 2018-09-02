@@ -78,6 +78,16 @@ public class ServiceRaceEntity {
     }
 
     @Override
+    public String toString() {
+        return "ServiceRaceEntity{" +
+                "serviceId=" + serviceId +
+                ", serviceName='" + serviceName + '\'' +
+                ", serviceDescribe='" + serviceDescribe + '\'' +
+                ", servicePrice=" + servicePrice +
+                '}';
+    }
+
+    @Override
     public int hashCode() {
         return Objects.hash(serviceId, serviceName, serviceDescribe, servicePrice);
     }

@@ -90,6 +90,17 @@ public class MasterEntity {
     }
 
     @Override
+    public String toString() {
+        return "MasterEntity{" +
+                "masterId=" + masterId +
+                ", masterName='" + masterName + '\'' +
+                ", masterSex='" + masterSex + '\'' +
+                ", masterTel='" + masterTel + '\'' +
+                ", masterMail='" + masterMail + '\'' +
+                '}';
+    }
+
+    @Override
     public int hashCode() {
         return Objects.hash(masterId, masterName, masterSex, masterTel, masterMail);
     }

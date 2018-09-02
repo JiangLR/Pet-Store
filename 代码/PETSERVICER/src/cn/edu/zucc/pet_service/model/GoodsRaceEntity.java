@@ -55,6 +55,15 @@ public class GoodsRaceEntity {
     }
 
     @Override
+    public String toString() {
+        return "GoodsRaceEntity{" +
+                "raceId=" + raceId +
+                ", raceName='" + raceName + '\'' +
+                ", raceDescribe='" + raceDescribe + '\'' +
+                '}';
+    }
+
+    @Override
     public int hashCode() {
         return Objects.hash(raceId, raceName, raceDescribe);
     }

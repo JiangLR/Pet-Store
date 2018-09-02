@@ -12,5 +12,9 @@
         <property name="staffRank" column="staff_rank"/>
         <property name="staffAccount" column="staff_account"/>
         <property name="staffPwd" column="staff_pwd"/>
+        <set name="log_infos" cascade="save-update, delete" inverse="true">
+            <key column="staff_id"/>
+            <one-to-many class="cn.edu.zucc.pet_service.model.LogInfoEntity"/>
+        </set>
     </class>
 </hibernate-mapping>

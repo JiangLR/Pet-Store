@@ -9,5 +9,6 @@
             <generator class="increment"/>
         </id>
         <property name="imgSrc" column="img_src"/>
+        <many-to-one name="pet" column="pet_id" class="cn.edu.zucc.pet_service.model.PetEntity"/>
     </class>
 </hibernate-mapping>

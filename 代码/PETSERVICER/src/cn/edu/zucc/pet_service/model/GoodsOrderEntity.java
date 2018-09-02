@@ -78,6 +78,16 @@ public class GoodsOrderEntity {
     }
 
     @Override
+    public String toString() {
+        return "GoodsOrderEntity{" +
+                "orderId=" + orderId +
+                ", orderNum=" + orderNum +
+                ", orderPrice=" + orderPrice +
+                ", orderStatus=" + orderStatus +
+                '}';
+    }
+
+    @Override
     public int hashCode() {
         return Objects.hash(orderId, orderNum, orderPrice, orderStatus);
     }

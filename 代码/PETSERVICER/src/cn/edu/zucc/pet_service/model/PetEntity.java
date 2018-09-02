@@ -19,6 +19,7 @@ public class PetEntity {
     private String petRace;
     private MasterEntity master;
     private Set<AppointmentEntity> appointments = new HashSet<>();
+    private Set<PhotosEntity> photos = new HashSet<>();
 
     @Id
     @Column(name = "pet_id")
@@ -86,6 +87,14 @@ public class PetEntity {
         this.appointments = appointments;
     }
 
+    public Set<PhotosEntity> getPhotos() {
+        return photos;
+    }
+
+    public void setPhotos(Set<PhotosEntity> photos) {
+        this.photos = photos;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -96,6 +105,18 @@ public class PetEntity {
                 Objects.equals(petNickname, that.petNickname) &&
                 Objects.equals(petSex, that.petSex) &&
                 Objects.equals(petRace, that.petRace);
+    }
+
+    @Override
+    public String toString() {
+        return "PetEntity{" +
+                "petId=" + petId +
+                ", petName='" + petName + '\'' +
+                ", petNickname='" + petNickname + '\'' +
+                ", petSex='" + petSex + '\'' +
+                ", petRace='" + petRace + '\'' +
+                ", master=" + master +
+                '}';
     }
 
     @Override

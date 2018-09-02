@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="cn.edu.zucc.pet_service.model.LogInfoEntity" table="log_info" schema="pet_service">
+        <id name="logId" column="log_id"/>
+        <property name="staffInTime" column="staff_in_time"/>
+        <property name="staffOutTime" column="staff_out_time"/>
+        <many-to-one name="staff" column="staff_id" class="cn.edu.zucc.pet_service.model.StaffEntity"/>
+    </class>
+</hibernate-mapping>

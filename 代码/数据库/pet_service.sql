@@ -1,6 +1,6 @@
 /*==============================================================*/
 /* DBMS name:      MySQL 5.0                                    */
-/* Created on:     2018/9/1 21:33:31                            */
+/* Created on:     2018/9/2 10:26:31                            */
 /*==============================================================*/
 
 
@@ -15,6 +15,8 @@ drop table if exists goods_order;
 drop table if exists goods_order_r;
 
 drop table if exists goods_race;
+
+drop table if exists log_info;
 
 drop table if exists master_info;
 
@@ -35,7 +37,7 @@ create table appointment_info
 (
    appointment_id       int not null auto_increment,
    pet_id               int,
-   appointment_start    date not null,
+   appointment_start    datetime not null,
    primary key (appointment_id)
 );
 
@@ -95,8 +97,20 @@ create table goods_race
 (
    race_id              int not null auto_increment,
    race_name            char(20) not null,
-   race_describe        char(100) not null,
+   race_describe        char(100),
    primary key (race_id)
+);
+
+/*==============================================================*/
+/* Table: log_info                                              */
+/*==============================================================*/
+create table log_info
+(
+   log_id               int not null,
+   staff_id             int,
+   staff_in_time        datetime,
+   staff_out_time       datetime,
+   primary key (log_id)
 );
 
 /*==============================================================*/
@@ -108,7 +122,7 @@ create table master_info
    master_name          char(50) not null,
    master_sex           char(10) not null,
    master_tel           char(20) not null,
-   master_mail          char(50) not null,
+   master_mail          char(50),
    primary key (master_id)
 );
 
@@ -120,8 +134,8 @@ create table pet_info
    pet_id               int not null auto_increment,
    master_id            int,
    pet_name             char(50) not null,
-   pet_nickname         char(50) not null,
-   pet_sex              char(10) not null,
+   pet_nickname         char(50),
+   pet_sex              char(10),
    pet_race             char(20) not null,
    primary key (pet_id)
 );
@@ -133,7 +147,7 @@ create table photos
 (
    photo_id             int not null auto_increment,
    pet_id               int,
-   img_src              char(100) not null,
+   img_src              char(100),
    primary key (photo_id)
 );
 
@@ -146,7 +160,7 @@ create table service_appointment_r
    appointment_id       int,
    service_id           int,
    finish_status        bool not null,
-   finish_time          date,
+   finish_time          datetime,
    primary key (service_appointment_id)
 );
 
@@ -157,7 +171,7 @@ create table service_race
 (
    service_id           int not null auto_increment,
    service_name         char(50) not null,
-   service_describe     char(100) not null,
+   service_describe     char(100),
    service_price        float(10) not null,
    primary key (service_id)
 );
@@ -192,6 +206,9 @@ alter table goods_order_r add constraint FK_Reference_10 foreign key (order_id)
 
 alter table goods_order_r add constraint FK_Reference_9 foreign key (goods_id)
       references goods_info (goods_id) on delete restrict on update restrict;
+
+alter table log_info add constraint FK_Reference_13 foreign key (staff_id)
+      references staff_info (staff_id) on delete restrict on update restrict;
 
 alter table pet_info add constraint FK_Reference_2 foreign key (master_id)
       references master_info (master_id) on delete restrict on update restrict;

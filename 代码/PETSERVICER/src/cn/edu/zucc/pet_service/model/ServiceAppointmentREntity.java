@@ -1,10 +1,9 @@
 package cn.edu.zucc.pet_service.model;
 
 import javax.persistence.*;
-import java.sql.Date;
-import java.util.HashSet;
+import java.util.Date;
+import java.sql.Timestamp;
 import java.util.Objects;
-import java.util.Set;
 
 /**
  * @Author JiangLR
@@ -15,12 +14,12 @@ import java.util.Set;
 public class ServiceAppointmentREntity {
     private int serviceAppointmentId;
     private byte finishStatus;
-    private Date finishTime;
+    private Timestamp finishTime;
     private ServiceRaceEntity service;
     private AppointmentEntity appointment;
 
     @Id
-    @Column(name = "service_appointment_r")
+    @Column(name = "service_appointment_id")
     public int getServiceAppointmentId() {
         return serviceAppointmentId;
     }
@@ -41,11 +40,11 @@ public class ServiceAppointmentREntity {
 
     @Basic
     @Column(name = "finish_time")
-    public Date getFinishTime() {
+    public Timestamp getFinishTime() {
         return finishTime;
     }
 
-    public void setFinishTime(Date finishTime) {
+    public void setFinishTime(Timestamp finishTime) {
         this.finishTime = finishTime;
     }
 
@@ -73,6 +72,17 @@ public class ServiceAppointmentREntity {
         return serviceAppointmentId == that.serviceAppointmentId &&
                 finishStatus == that.finishStatus &&
                 Objects.equals(finishTime, that.finishTime);
+    }
+
+    @Override
+    public String toString() {
+        return "ServiceAppointmentREntity{" +
+                "serviceAppointmentId=" + serviceAppointmentId +
+                ", finishStatus=" + finishStatus +
+                ", finishTime=" + finishTime +
+                ", service=" + service +
+                ", appointment=" + appointment +
+                '}';
     }
 
     @Override

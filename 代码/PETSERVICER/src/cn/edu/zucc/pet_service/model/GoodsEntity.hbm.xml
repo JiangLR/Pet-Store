@@ -12,7 +12,7 @@
         <property name="goodsPrice" column="goods_price"/>
         <property name="onSale" column="on_sale"/>
         <property name="goodsBarcode" column="goods_barcode"/>
-        <set name="orders" table="goods_order_r" cascade="save-update" inverse="true">
+        <set name="orders" table="goods_order_r" cascade="save-update, delete" inverse="true">
             <key column="goods_id"/>
             <many-to-many class="cn.edu.zucc.pet_service.model.GoodsOrderEntity" column="order_id"/>
         </set>

@@ -17,13 +17,14 @@ public class GoodsOrderREntity {
 
     @Id
     @Column(name = "goods_order_id")
-    public int getServiceAppointmentR() {
+    public int getGoodsOrderId() {
         return goodsOrderId;
     }
 
-    public void setServiceAppointmentR(int goodsOrderR) {
-        this.goodsOrderId = goodsOrderR;
+    public void setGoodsOrderId(int goodsOrderId) {
+        this.goodsOrderId = goodsOrderId;
     }
+
 
     @Override
     public boolean equals(Object o) {
@@ -31,6 +32,13 @@ public class GoodsOrderREntity {
         if (o == null || getClass() != o.getClass()) return false;
         GoodsOrderREntity that = (GoodsOrderREntity) o;
         return goodsOrderId == that.goodsOrderId;
+    }
+
+    @Override
+    public String toString() {
+        return "GoodsOrderREntity{" +
+                "goodsOrderId=" + goodsOrderId +
+                '}';
     }
 
     @Override

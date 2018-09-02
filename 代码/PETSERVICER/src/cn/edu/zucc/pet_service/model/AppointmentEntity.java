@@ -1,7 +1,7 @@
 package cn.edu.zucc.pet_service.model;
 
 import javax.persistence.*;
-import java.sql.Date;
+import java.sql.Timestamp;
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
@@ -14,7 +14,7 @@ import java.util.Set;
 @Table(name = "appointment_info", schema = "pet_service", catalog = "")
 public class AppointmentEntity {
     private int appointmentId;
-    private Date appointmentStart;
+    private Timestamp appointmentStart;
     private PetEntity pet;
     private Set<ServiceAppointmentREntity> service_appointments = new HashSet<>();
 
@@ -30,11 +30,11 @@ public class AppointmentEntity {
 
     @Basic
     @Column(name = "appointment_start")
-    public Date getAppointmentStart() {
+    public Timestamp getAppointmentStart() {
         return appointmentStart;
     }
 
-    public void setAppointmentStart(Date appointmentStart) {
+    public void setAppointmentStart(Timestamp appointmentStart) {
         this.appointmentStart = appointmentStart;
     }
 
@@ -61,6 +61,15 @@ public class AppointmentEntity {
         AppointmentEntity that = (AppointmentEntity) o;
         return appointmentId == that.appointmentId &&
                 Objects.equals(appointmentStart, that.appointmentStart);
+    }
+
+    @Override
+    public String toString() {
+        return "AppointmentEntity{" +
+                "appointmentId=" + appointmentId +
+                ", appointmentStart=" + appointmentStart +
+                ", pet=" + pet +
+                '}';
     }
 
     @Override

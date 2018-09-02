@@ -1092,7 +1092,7 @@
       <RefTableName>master_info</RefTableName>
       <RefColNames>master_id</RefColNames>
     </foreign-key>
-    <column id="272" parent="235" name="goods_order_r">
+    <column id="272" parent="235" name="goods_order_id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
@@ -1119,7 +1119,7 @@
     </index>
     <key id="277" parent="235" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
-      <ColNames>goods_order_r</ColNames>
+      <ColNames>goods_order_id</ColNames>
       <Primary>1</Primary>
     </key>
     <foreign-key id="278" parent="235" name="FK_Reference_9">
@@ -1278,7 +1278,7 @@
       <RefTableName>pet_info</RefTableName>
       <RefColNames>pet_id</RefColNames>
     </foreign-key>
-    <column id="305" parent="240" name="service_appointment_r">
+    <column id="305" parent="240" name="service_appointment_id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
@@ -1304,96 +1304,101 @@
     <column id="309" parent="240" name="finish_time">
       <Position>5</Position>
       <DataType>date|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="310" parent="240" name="service_appointment_r">
+      <Position>6</Position>
+      <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="310" parent="240" name="FK_Reference_11">
+    <index id="311" parent="240" name="FK_Reference_11">
       <ColNames>appointment_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="311" parent="240" name="FK_Reference_12">
+    <index id="312" parent="240" name="FK_Reference_12">
       <ColNames>service_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="312" parent="240" name="PRIMARY">
+    <key id="313" parent="240" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
-      <ColNames>service_appointment_r</ColNames>
+      <ColNames>service_appointment_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="313" parent="240" name="FK_Reference_11">
+    <foreign-key id="314" parent="240" name="FK_Reference_11">
       <ColNames>appointment_id</ColNames>
       <RefSchemaName>pet_service</RefSchemaName>
       <RefTableName>appointment_info</RefTableName>
       <RefColNames>appointment_id</RefColNames>
     </foreign-key>
-    <foreign-key id="314" parent="240" name="FK_Reference_12">
+    <foreign-key id="315" parent="240" name="FK_Reference_12">
       <ColNames>service_id</ColNames>
       <RefSchemaName>pet_service</RefSchemaName>
       <RefTableName>service_race</RefTableName>
       <RefColNames>service_id</RefColNames>
     </foreign-key>
-    <column id="315" parent="241" name="service_id">
+    <column id="316" parent="241" name="service_id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="316" parent="241" name="service_name">
+    <column id="317" parent="241" name="service_name">
       <Position>2</Position>
       <DataType>char(50)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="317" parent="241" name="service_describe">
+    <column id="318" parent="241" name="service_describe">
       <Position>3</Position>
       <DataType>char(100)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="318" parent="241" name="service_price">
+    <column id="319" parent="241" name="service_price">
       <Position>4</Position>
       <DataType>float|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="319" parent="241" name="PRIMARY">
+    <key id="320" parent="241" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>service_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="320" parent="242" name="staff_id">
+    <column id="321" parent="242" name="staff_id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="321" parent="242" name="staff_name">
+    <column id="322" parent="242" name="staff_name">
       <Position>2</Position>
       <DataType>char(50)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="322" parent="242" name="staff_rank">
+    <column id="323" parent="242" name="staff_rank">
       <Position>3</Position>
       <DataType>char(5)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="323" parent="242" name="staff_account">
+    <column id="324" parent="242" name="staff_account">
       <Position>4</Position>
       <DataType>char(10)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="324" parent="242" name="staff_pwd">
+    <column id="325" parent="242" name="staff_pwd">
       <Position>5</Position>
       <DataType>char(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="325" parent="242" name="PRIMARY">
+    <key id="326" parent="242" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>staff_id</ColNames>
       <Primary>1</Primary>

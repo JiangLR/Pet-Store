@@ -43,6 +43,14 @@ public class BrandsEntity {
     }
 
     @Override
+    public String toString() {
+        return "BrandsEntity{" +
+                "brandsId=" + brandsId +
+                ", brandsName='" + brandsName + '\'' +
+                '}';
+    }
+
+    @Override
     public int hashCode() {
         return Objects.hash(brandsId, brandsName);
     }

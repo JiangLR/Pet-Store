@@ -6,7 +6,7 @@
 
     <class name="cn.edu.zucc.pet_service.model.ServiceAppointmentREntity" table="service_appointment_r"
            schema="pet_service">
-        <id name="serviceAppointmentId" column="service_appointment_r">
+        <id name="serviceAppointmentId" column="service_appointment_id">
             <generator class="increment"/>
         </id>
         <property name="finishStatus" column="finish_status"/>

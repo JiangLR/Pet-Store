@@ -1,7 +1,9 @@
 package cn.edu.zucc.pet_service.model;
 
 import javax.persistence.*;
+import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
 
 /**
  * @Author JiangLR
@@ -15,6 +17,7 @@ public class StaffEntity {
     private String staffRank;
     private String staffAccount;
     private String staffPwd;
+    private Set<LogInfoEntity> log_infos = new HashSet<>();
 
     @Id
     @Column(name = "staff_id")
@@ -66,6 +69,14 @@ public class StaffEntity {
         this.staffPwd = staffPwd;
     }
 
+    public Set<LogInfoEntity> getLog_infos() {
+        return log_infos;
+    }
+
+    public void setLog_infos(Set<LogInfoEntity> log_infos) {
+        this.log_infos = log_infos;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -76,6 +87,17 @@ public class StaffEntity {
                 Objects.equals(staffRank, that.staffRank) &&
                 Objects.equals(staffAccount, that.staffAccount) &&
                 Objects.equals(staffPwd, that.staffPwd);
+    }
+
+    @Override
+    public String toString() {
+        return "StaffEntity{" +
+                "staffId=" + staffId +
+                ", staffName='" + staffName + '\'' +
+                ", staffRank='" + staffRank + '\'' +
+                ", staffAccount='" + staffAccount + '\'' +
+                ", staffPwd='" + staffPwd + '\'' +
+                '}';
     }
 
     @Override

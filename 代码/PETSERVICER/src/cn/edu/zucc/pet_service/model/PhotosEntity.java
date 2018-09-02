@@ -12,6 +12,7 @@ import java.util.Objects;
 public class PhotosEntity {
     private int photoId;
     private String imgSrc;
+    private PetEntity pet;
 
     @Id
     @Column(name = "photo_id")
@@ -33,6 +34,14 @@ public class PhotosEntity {
         this.imgSrc = imgSrc;
     }
 
+    public PetEntity getPet() {
+        return pet;
+    }
+
+    public void setPet(PetEntity pet) {
+        this.pet = pet;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -40,6 +49,14 @@ public class PhotosEntity {
         PhotosEntity that = (PhotosEntity) o;
         return photoId == that.photoId &&
                 Objects.equals(imgSrc, that.imgSrc);
+    }
+
+    @Override
+    public String toString() {
+        return "PhotosEntity{" +
+                "photoId=" + photoId +
+                ", imgSrc='" + imgSrc + '\'' +
+                '}';
     }
 
     @Override
