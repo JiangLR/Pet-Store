@@ -17,6 +17,7 @@ public class GoodsEntity {
     private double goodsPrice;
     private double onSale;
     private String goodsBarcode;
+    private GoodsRaceEntity goodsRace;
     private Set<GoodsOrderEntity> orders = new HashSet<>();
 
     @Id
@@ -75,6 +76,14 @@ public class GoodsEntity {
 
     public void setOrders(Set<GoodsOrderEntity> orders) {
         this.orders = orders;
+    }
+
+    public GoodsRaceEntity getGoodsRace() {
+        return goodsRace;
+    }
+
+    public void setGoodsRace(GoodsRaceEntity goodsRace) {
+        this.goodsRace = goodsRace;
     }
 
     @Override

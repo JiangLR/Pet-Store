@@ -16,5 +16,6 @@
             <key column="goods_id"/>
             <many-to-many class="cn.edu.zucc.pet_service.model.GoodsOrderEntity" column="order_id"/>
         </set>
+        <many-to-one name="goodsRace" column="goods_race_id" class="cn.edu.zucc.pet_service.model.GoodsRaceEntity"/>
     </class>
 </hibernate-mapping>

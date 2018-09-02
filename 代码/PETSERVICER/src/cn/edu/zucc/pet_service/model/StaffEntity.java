@@ -14,7 +14,7 @@ import java.util.Set;
 public class StaffEntity {
     private int staffId;
     private String staffName;
-    private String staffRank;
+    private int staffRank;
     private String staffAccount;
     private String staffPwd;
     private Set<LogInfoEntity> log_infos = new HashSet<>();
@@ -39,13 +39,11 @@ public class StaffEntity {
         this.staffName = staffName;
     }
 
-    @Basic
-    @Column(name = "staff_rank")
-    public String getStaffRank() {
+    public int getStaffRank() {
         return staffRank;
     }
 
-    public void setStaffRank(String staffRank) {
+    public void setStaffRank(int staffRank) {
         this.staffRank = staffRank;
     }
 
@@ -83,8 +81,8 @@ public class StaffEntity {
         if (o == null || getClass() != o.getClass()) return false;
         StaffEntity that = (StaffEntity) o;
         return staffId == that.staffId &&
+                staffRank == that.staffRank &&
                 Objects.equals(staffName, that.staffName) &&
-                Objects.equals(staffRank, that.staffRank) &&
                 Objects.equals(staffAccount, that.staffAccount) &&
                 Objects.equals(staffPwd, that.staffPwd);
     }

@@ -9,7 +9,7 @@
         <!-- hibernate.connection.username : 连接数据库的用户名 -->
         <property name="hibernate.connection.username">root</property>
         <!-- hibernate.connection.password : 连接数据库的密码 -->
-        <property name="hibernate.connection.password">19980102</property>
+        <property name="hibernate.connection.password">123456</property>
         <!-- hibernate.connection.url : 连接数据库的地址,路径 -->
         <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/pet_service?serverTimezone=GMT%2B8</property>
         <!-- show_sql: 操作数据库时,会 向控制台打印sql语句 -->
@@ -37,5 +37,6 @@
         <mapping resource="cn/edu/zucc/pet_service/model/ServiceAppointmentREntity.hbm.xml"/>
         <mapping resource="cn/edu/zucc/pet_service/model/ServiceRaceEntity.hbm.xml"/>
         <mapping resource="cn/edu/zucc/pet_service/model/StaffEntity.hbm.xml"/>
+        <mapping resource="cn/edu/zucc/pet_service/model/PetRaceEntity.hbm.xml"/>
     </session-factory>
 </hibernate-configuration>
