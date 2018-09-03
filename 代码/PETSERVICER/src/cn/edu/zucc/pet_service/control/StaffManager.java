@@ -15,16 +15,16 @@ import org.hibernate.query.Query;
  */
 public class StaffManager implements IStaffManager {
     @Override
-    public StaffEntity reg(String staffaccount, String pwd, String pwd2, String name, int staffrank) throws BaseException {
+    public StaffEntity reg(String staffAccount, String pwd, String pwd2, String name, int staffRank) throws BaseException {
         if (pwd.equals("") || pwd2.equals(""))
             throw new BaseException("密码不能为空");
-        if (staffaccount.equals(""))
+        if (staffAccount.equals(""))
             throw new BaseException("用户名不能为空！");
         if (!pwd.equals(pwd2))
             throw new BaseException("两次输入的密码必须一致!");
         if (name.equals(""))
             throw new BaseException("姓名不能为空");
-        if (staffrank < 1 || staffrank > 3) {
+        if (staffRank < 1 || staffRank > 3) {
             throw new BaseException("员工等级错误");
         }
 
@@ -33,15 +33,15 @@ public class StaffManager implements IStaffManager {
         Transaction tx = null;
         try {
             tx = session.beginTransaction();
-            String hql = "from StaffEntity where staffAccount = :staffaccount";
+            String hql = "from StaffEntity where staffAccount = :staffAccount";
             Query query = session.createQuery(hql);
-            query.setParameter("staffaccount", staffaccount);
+            query.setParameter("staffAccount", staffAccount);
             StaffEntity staff = (StaffEntity) query.uniqueResult();
             if (staff == null) {
-                newstaff.setStaffAccount(staffaccount);
+                newstaff.setStaffAccount(staffAccount);
                 newstaff.setStaffPwd(pwd);
                 newstaff.setStaffName(name);
-                newstaff.setStaffRank(staffrank);
+                newstaff.setStaffRank(staffRank);
             } else {
                 throw new BaseException("此员工已存在");
             }
@@ -59,15 +59,15 @@ public class StaffManager implements IStaffManager {
     }
 
     @Override
-    public StaffEntity login(String staffaccount, String pwd) throws BaseException {
+    public StaffEntity login(String staffAccount, String pwd) throws BaseException {
         StaffEntity staff = new StaffEntity();
         Session session = HibernateUtil.openSession();
         Transaction tx = null;
         try {
             tx = session.beginTransaction();
-            String hql = "from StaffEntity where staffAccount = :staffaccount";
+            String hql = "from StaffEntity where staffAccount = :staffAccount";
             Query query = session.createQuery(hql);
-            query.setParameter("staffaccount", staffaccount);
+            query.setParameter("staffAccount", staffAccount);
             staff = (StaffEntity) query.uniqueResult();
             if (staff == null) {
                 throw new BaseException("此用户不存在");

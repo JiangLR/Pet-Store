@@ -16,7 +16,7 @@ public class ServiceRaceEntity {
     private String serviceName;
     private String serviceDescribe;
     private double servicePrice;
-    private Set<ServiceAppointmentREntity> service_appointments = new HashSet<>();
+    private Set<ServiceAppointmentREntity> serviceAppointments = new HashSet<>();
 
     @Id
     @Column(name = "service_id")
@@ -58,12 +58,12 @@ public class ServiceRaceEntity {
         this.servicePrice = servicePrice;
     }
 
-    public Set<ServiceAppointmentREntity> getService_appointments() {
-        return service_appointments;
+    public Set<ServiceAppointmentREntity> getServiceAppointments() {
+        return serviceAppointments;
     }
 
-    public void setService_appointments(Set<ServiceAppointmentREntity> service_appointment) {
-        this.service_appointments = service_appointment;
+    public void setServiceAppointments(Set<ServiceAppointmentREntity> serviceAppointment) {
+        this.serviceAppointments = serviceAppointment;
     }
 
     @Override

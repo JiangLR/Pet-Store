@@ -16,7 +16,7 @@ public class PetEntity {
     private String petName;
     private String petNickname;
     private String petSex;
-    private String petRace;
+    private PetRaceEntity petRace;
     private MasterEntity master;
     private Set<AppointmentEntity> appointments = new HashSet<>();
     private Set<PhotosEntity> photos = new HashSet<>();
@@ -62,12 +62,12 @@ public class PetEntity {
     }
 
     @Basic
-    @Column(name = "pet_race")
-    public String getPetRace() {
+    @Column(name = "pet_race_id")
+    public PetRaceEntity getPetRace() {
         return petRace;
     }
 
-    public void setPetRace(String petRace) {
+    public void setPetRace(PetRaceEntity petRace) {
         this.petRace = petRace;
     }
 

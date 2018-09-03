@@ -21,7 +21,7 @@ public class GoodsEntity {
     private GoodsRaceEntity goodsRace;
     private int goodsAmount;
     private BrandsEntity brand;
-    private Set<GoodsOrderEntity> orders = new HashSet<>();
+    private Set<GoodsOrderREntity> goodsOrders = new HashSet<>();
 
     @Id
     @Column(name = "goods_id")
@@ -73,12 +73,12 @@ public class GoodsEntity {
         this.goodsBarcode = goodsBarcode;
     }
 
-    public Set<GoodsOrderEntity> getOrders() {
-        return orders;
+    public Set<GoodsOrderREntity> getGoodsOrders() {
+        return goodsOrders;
     }
 
-    public void setOrders(Set<GoodsOrderEntity> orders) {
-        this.orders = orders;
+    public void setGoodsOrders(Set<GoodsOrderREntity> goodsOrders) {
+        this.goodsOrders = goodsOrders;
     }
 
     public GoodsRaceEntity getGoodsRace() {

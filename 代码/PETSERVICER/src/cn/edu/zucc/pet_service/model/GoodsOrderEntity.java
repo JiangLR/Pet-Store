@@ -13,10 +13,10 @@ import java.util.Set;
 @Table(name = "goods_order", schema = "pet_service", catalog = "")
 public class GoodsOrderEntity {
     private int orderId;
-    private int orderNum;
     private double orderPrice;
-    private byte orderStatus;
-    private Set<GoodsEntity> goods = new HashSet<>();
+    private int orderStatus;
+    private MasterEntity master;
+    private Set<GoodsOrderREntity> goodsOrders = new HashSet<>();
 
     @Id
     @Column(name = "order_id")
@@ -26,16 +26,6 @@ public class GoodsOrderEntity {
 
     public void setOrderId(int orderId) {
         this.orderId = orderId;
-    }
-
-    @Basic
-    @Column(name = "order_num")
-    public int getOrderNum() {
-        return orderNum;
-    }
-
-    public void setOrderNum(int orderNum) {
-        this.orderNum = orderNum;
     }
 
     @Basic
@@ -50,20 +40,28 @@ public class GoodsOrderEntity {
 
     @Basic
     @Column(name = "order_status")
-    public byte getOrderStatus() {
+    public int getOrderStatus() {
         return orderStatus;
     }
 
-    public void setOrderStatus(byte orderStatus) {
+    public void setOrderStatus(int orderStatus) {
         this.orderStatus = orderStatus;
     }
 
-    public Set<GoodsEntity> getGoods() {
-        return goods;
+    public Set<GoodsOrderREntity> getGoodsOrders() {
+        return goodsOrders;
     }
 
-    public void setGoods(Set<GoodsEntity> goods) {
-        this.goods = goods;
+    public void setGoodsOrders(Set<GoodsOrderREntity> goodsOrders) {
+        this.goodsOrders = goodsOrders;
+    }
+
+    public MasterEntity getMaster() {
+        return master;
+    }
+
+    public void setMaster(MasterEntity master) {
+        this.master = master;
     }
 
     @Override
@@ -72,7 +70,6 @@ public class GoodsOrderEntity {
         if (o == null || getClass() != o.getClass()) return false;
         GoodsOrderEntity that = (GoodsOrderEntity) o;
         return orderId == that.orderId &&
-                orderNum == that.orderNum &&
                 Double.compare(that.orderPrice, orderPrice) == 0 &&
                 orderStatus == that.orderStatus;
     }
@@ -81,7 +78,6 @@ public class GoodsOrderEntity {
     public String toString() {
         return "GoodsOrderEntity{" +
                 "orderId=" + orderId +
-                ", orderNum=" + orderNum +
                 ", orderPrice=" + orderPrice +
                 ", orderStatus=" + orderStatus +
                 '}';
@@ -89,6 +85,6 @@ public class GoodsOrderEntity {
 
     @Override
     public int hashCode() {
-        return Objects.hash(orderId, orderNum, orderPrice, orderStatus);
+        return Objects.hash(orderId, orderPrice, orderStatus);
     }
 }

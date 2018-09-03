@@ -6,12 +6,12 @@ import cn.edu.zucc.pet_service.model.GoodsEntity;
 import cn.edu.zucc.pet_service.model.GoodsRaceEntity;
 import cn.edu.zucc.pet_service.util.BaseException;
 import cn.edu.zucc.pet_service.util.HibernateUtil;
-import com.sun.prism.impl.shape.BasicEllipseRep;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 
 import java.sql.Blob;
+import java.util.List;
 
 /**
  * @Author JiangLR
@@ -19,38 +19,52 @@ import java.sql.Blob;
  */
 public class GoodsManager implements IGoodsManager {
     @Override
-    public GoodsEntity reg_goods(String name, Float price, Float on_sale, Blob barcode, int goods_amount, GoodsRaceEntity goods_race, BrandsEntity brand) throws BaseException {
+    public GoodsEntity regGoods(String name, Double price, Double onSale, Blob barcode, int goodsAmount, GoodsRaceEntity goodsRace, BrandsEntity brand) throws BaseException {
         if (name.equals(""))
             throw new BaseException("商品名称不能为空");
+        if (goodsRace == null)
+            throw new BaseException("商品类别不能为空");
+        if (brand == null)
+            throw new BaseException("商品品牌不能为空");
         Session session = HibernateUtil.openSession();
         Transaction tx = null;
-        GoodsEntity new_goods = new GoodsEntity();
+        GoodsEntity newGoods = new GoodsEntity();
         try {
             tx = session.beginTransaction();
             String hql = "from GoodsEntity where goodsName = :name";
             Query query = session.createQuery(hql);
             query.setParameter("name", name);
             GoodsEntity goods = (GoodsEntity) query.uniqueResult();
-            if(goods != null)
+            if (goods != null)
                 throw new BaseException("此商品已存在");
-            new_goods.setGoodsName(name);
-            new_goods.setGoodsPrice(price);
-            new_goods.setOnSale(on_sale);
-            new_goods.setGoodsBarcode(barcode);
-            new_goods.setGoodsRace(goods_race);
-            new_goods.setGoodsAmount(goods_amount);
-            new_goods.setBrand(brand);
-            brand.getGoods().add(new_goods);
-            goods_race.getGoods().add(new_goods);
-            session.save(new_goods);
+            newGoods.setGoodsName(name);
+            newGoods.setGoodsPrice(price);
+            newGoods.setOnSale(onSale);
+            newGoods.setGoodsBarcode(barcode);
+            newGoods.setGoodsRace(goodsRace);
+            newGoods.setGoodsAmount(goodsAmount);
+            newGoods.setBrand(brand);
+
+            brand.getGoods().add(newGoods);
+            goodsRace.getGoods().add(newGoods);
+            session.save(newGoods);
             tx.commit();
         } catch (Exception e) {
-            if(tx != null)
+            if (tx != null)
                 tx.rollback();
             throw e;
         } finally {
             session.clear();
         }
-        return new_goods;
+        return newGoods;
+    }
+
+    @Override
+    public List<GoodsEntity> loadAll() {
+        String hql = "from GoodsEntity";
+        Query<GoodsEntity> query = HibernateUtil.openSession().createQuery(hql);
+        return query.list();
     }
 }
+
+

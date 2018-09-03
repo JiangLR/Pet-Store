@@ -11,7 +11,7 @@
         <property name="serviceName" column="service_name"/>
         <property name="serviceDescribe" column="service_describe"/>
         <property name="servicePrice" column="service_price"/>
-        <set name="service_appointments" cascade="save-update, delete" inverse="true">
+        <set name="serviceAppointments" cascade="save-update, delete" inverse="true">
             <key column="service_id"/>
             <one-to-many class="cn.edu.zucc.pet_service.model.ServiceAppointmentREntity"/>
         </set>

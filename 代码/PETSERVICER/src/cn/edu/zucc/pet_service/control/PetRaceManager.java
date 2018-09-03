@@ -50,7 +50,7 @@ public class PetRaceManager implements IPetRaceManager {
 
     @SuppressWarnings({"unchecked"})
     @Override
-    public List<PetRaceEntity> loadAll() throws BaseException {
+    public List<PetRaceEntity> loadAll(){
         String hql = "from PetRaceEntity";
         Query<PetRaceEntity> query = HibernateUtil.openSession().createQuery(hql);
         return query.list();
@@ -58,6 +58,11 @@ public class PetRaceManager implements IPetRaceManager {
 
     @Override
     public PetRaceEntity loadPetRace(String name) throws BaseException {
-        
+        String hql = "from PetRaceEntity where petRaceName = :name";
+        PetRaceEntity petRace = (PetRaceEntity) HibernateUtil.openSession()
+                .createQuery(hql).setParameter("name", name).uniqueResult();
+        if(petRace == null)
+            throw new BaseException("此类不存在");
+        return petRace;
     }
 }

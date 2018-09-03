@@ -2,7 +2,6 @@ package cn.edu.zucc.pet_service.control;
 
 import cn.edu.zucc.pet_service.itf.IMasterManager;
 import cn.edu.zucc.pet_service.model.MasterEntity;
-import cn.edu.zucc.pet_service.model.PetEntity;
 import cn.edu.zucc.pet_service.util.BaseException;
 import cn.edu.zucc.pet_service.util.HibernateUtil;
 import org.hibernate.Session;
@@ -51,31 +50,13 @@ public class MasterManager implements IMasterManager {
     }
 
     @Override
-    public MasterEntity loadMaster(int master_id) throws BaseException {
+    public MasterEntity loadMaster(int master_id) {
         Session session = HibernateUtil.openSession();
-        Transaction tx = null;
-        MasterEntity master;
-        try {
-            tx = session.beginTransaction();
-            String hql = "from MasterEntity where masterId = :master_id";
-            Query query = session.createQuery(hql);
-            query.setParameter("master_id", master_id);
-            master = (MasterEntity) query.uniqueResult();
-            if (master == null) {
-                throw new BaseException("此用户不存在");
-            }
-            tx.commit();
-        } catch (Exception e) {
-            if (tx != null) {
-                tx.rollback();
-            }
-            throw e;
-        } finally {
-            session.clear();
-        }
+        MasterEntity master = session.get(MasterEntity.class, 1);
         return master;
     }
 
+    @SuppressWarnings({"unchecked"})
     @Override
     public List<MasterEntity> loadAll() throws BaseException {
         String hql = "from MasterEntity";

@@ -11,6 +11,7 @@ import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 
 import java.util.List;
+import java.util.Set;
 
 /**
  * @Author JiangLR
@@ -19,45 +20,49 @@ import java.util.List;
 public class PetManager implements IPetManager {
     @SuppressWarnings({ "unchecked" })
     @Override
-    public List<PetEntity> loadAll() throws BaseException {
+    public List<PetEntity> loadAll(){
         String hql = "from PetEntity";
         Query<PetEntity> query = HibernateUtil.openSession().createQuery(hql);
         return query.list();
     }
 
     @Override
-    public PetEntity loadPet(int pet_id) throws BaseException {
-        return null;
+    public PetEntity loadPet(int pet_id){
+        Session session = HibernateUtil.openSession();
+        PetEntity pet = session.get(PetEntity.class, pet_id);
+        return pet;
     }
 
     @Override
-    public List<PetEntity> loadPets(MasterEntity master) throws BaseException {
-        return null;
+    public Set<PetEntity> loadPets(MasterEntity master){
+        return master.getPets();
     }
 
     @Override
-    public List<PetEntity> loadPets(PetRaceEntity pet_race) throws BaseException {
-        return null;
+    public Set<PetEntity> loadPets(PetRaceEntity petRace){
+        return petRace.getPets();
     }
 
     @Override
-    public PetEntity regPet(String name, String nickname, String sex, MasterEntity master) throws BaseException {
+    public PetEntity regPet(String name, String nickname, String sex, MasterEntity master, PetRaceEntity petRace) throws BaseException {
         if (name.equals(""))
             throw new BaseException("宠物姓名不能为空");
 
-        PetEntity newpet = new PetEntity();
+        PetEntity newPet = new PetEntity();
         Session session = HibernateUtil.openSession();
         Transaction tx = null;
         try {
             tx = session.beginTransaction();
-            newpet.setPetName(name);
-            newpet.setPetNickname(nickname);
-            newpet.setPetSex(sex);
+            newPet.setPetName(name);
+            newPet.setPetNickname(nickname);
+            newPet.setPetSex(sex);
 
-            master.getPets().add(newpet);
-            newpet.setMaster(master);
+            master.getPets().add(newPet);
+            newPet.setMaster(master);
+            petRace.getPets().add(newPet);
+            newPet.setPetRace(petRace);
 
-            session.update(master);
+            session.saveOrUpdate(master);
             tx.commit();
 
         } catch (Exception e) {
@@ -68,7 +73,7 @@ public class PetManager implements IPetManager {
         } finally {
             session.clear();
         }
-        return newpet;
+        return newPet;
     }
 
     @Override

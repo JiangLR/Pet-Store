@@ -18,6 +18,7 @@ public class MasterEntity {
     private String masterTel;
     private String masterMail;
     private Set<PetEntity> pets = new HashSet<>();
+    private Set<GoodsOrderEntity> goodsOrders = new HashSet<>();
 
     @Id
     @Column(name = "master_id")
@@ -75,6 +76,14 @@ public class MasterEntity {
 
     public void setPets(Set<PetEntity> pets) {
         this.pets = pets;
+    }
+
+    public Set<GoodsOrderEntity> getGoodsOrders() {
+        return goodsOrders;
+    }
+
+    public void setGoodsOrders(Set<GoodsOrderEntity> goodsOrders) {
+        this.goodsOrders = goodsOrders;
     }
 
     @Override

@@ -14,6 +14,8 @@ import java.util.Objects;
 @Table(name = "goods_order_r", schema = "pet_service", catalog = "")
 public class GoodsOrderREntity {
     private int goodsOrderId;
+    private GoodsEntity goods;
+    private GoodsOrderEntity goodsOrder;
 
     @Id
     @Column(name = "goods_order_id")
@@ -32,6 +34,22 @@ public class GoodsOrderREntity {
         if (o == null || getClass() != o.getClass()) return false;
         GoodsOrderREntity that = (GoodsOrderREntity) o;
         return goodsOrderId == that.goodsOrderId;
+    }
+
+    public GoodsEntity getGoods() {
+        return goods;
+    }
+
+    public void setGoods(GoodsEntity goods) {
+        this.goods = goods;
+    }
+
+    public GoodsOrderEntity getGoodsOrder() {
+        return goodsOrder;
+    }
+
+    public void setGoodsOrder(GoodsOrderEntity goodsOrder) {
+        this.goodsOrder = goodsOrder;
     }
 
     @Override

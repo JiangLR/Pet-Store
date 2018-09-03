@@ -16,7 +16,7 @@ public class AppointmentEntity {
     private int appointmentId;
     private Timestamp appointmentStart;
     private PetEntity pet;
-    private Set<ServiceAppointmentREntity> service_appointments = new HashSet<>();
+    private Set<ServiceAppointmentREntity> serviceAppointments = new HashSet<>();
 
     @Id
     @Column(name = "appointment_id")
@@ -46,12 +46,12 @@ public class AppointmentEntity {
         this.pet = pet;
     }
 
-    public Set<ServiceAppointmentREntity> getService_appointments() {
-        return service_appointments;
+    public Set<ServiceAppointmentREntity> getServiceAppointments() {
+        return serviceAppointments;
     }
 
-    public void setService_appointments(Set<ServiceAppointmentREntity> service_appointments) {
-        this.service_appointments = service_appointments;
+    public void setServiceAppointments(Set<ServiceAppointmentREntity> serviceAppointments) {
+        this.serviceAppointments = serviceAppointments;
     }
 
     @Override

@@ -13,7 +13,7 @@ import java.util.List;
 public interface IMasterManager {
     public MasterEntity regMaster(String name, String sex, String tel, String mail) throws BaseException;
 
-    public MasterEntity loadMaster(int master_id) throws BaseException;
+    public MasterEntity loadMaster(int master_id);
 
     public List<MasterEntity> loadAll() throws BaseException;
 }

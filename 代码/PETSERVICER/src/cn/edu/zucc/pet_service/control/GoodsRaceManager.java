@@ -65,7 +65,7 @@ public class GoodsRaceManager implements IGoodsRaceManager {
     }
 
     @Override
-    public List<GoodsRaceEntity> loadAll() throws BaseException {
+    public List<GoodsRaceEntity> loadAll(){
         String hql = "from GoodsRaceEntity";
         Query<GoodsRaceEntity> query = HibernateUtil.openSession().createQuery(hql);
         return query.list();

@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <!DOCTYPE hibernate-mapping PUBLIC
-    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 
     <class name="cn.edu.zucc.pet_service.model.GoodsEntity" table="goods_info" schema="pet_service">
@@ -13,9 +13,9 @@
         <property name="onSale" column="on_sale"/>
         <property name="goodsBarcode" column="goods_barcode"/>
         <property name="goodsAmount" column="goods_amount"/>
-        <set name="orders" table="goods_order_r" cascade="save-update, delete" inverse="true">
-            <key column="goods_id"/>
-            <many-to-many class="cn.edu.zucc.pet_service.model.GoodsOrderEntity" column="order_id"/>
+        <set name="goodsOrders" cascade="save-update, delete" inverse="true">
+            <key column="order_id"/>
+            <one-to-many class="cn.edu.zucc.pet_service.model.GoodsOrderREntity"/>
         </set>
         <many-to-one name="goodsRace" column="goods_race_id" class="cn.edu.zucc.pet_service.model.GoodsRaceEntity"/>
         <many-to-one name="brand" column="brands_id" class="cn.edu.zucc.pet_service.model.BrandsEntity"/>

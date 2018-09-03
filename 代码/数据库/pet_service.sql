@@ -1,6 +1,6 @@
 /*==============================================================*/
 /* DBMS name:      MySQL 5.0                                    */
-/* Created on:     2018/9/2 21:29:19                            */
+/* Created on:     2018/9/3 21:17:22                            */
 /*==============================================================*/
 
 
@@ -64,7 +64,8 @@ create table goods_info
    goods_name           char(50) not null,
    goods_price          float(10) not null,
    on_sale              float(10) not null,
-   goods_barcode        char(20) not null,
+   goods_barcode        longtext not null,
+   goods_amount         int not null,
    primary key (goods_id)
 );
 
@@ -75,9 +76,8 @@ create table goods_order
 (
    order_id             int not null auto_increment,
    master_id            int,
-   order_num            int not null,
    order_price          float(10) not null,
-   order_status         bool not null,
+   order_status         int not null,
    primary key (order_id)
 );
 
@@ -89,6 +89,7 @@ create table goods_order_r
    goods_order_id       int not null auto_increment,
    goods_id             int,
    order_id             int,
+   order_goods_amount   int not null,
    primary key (goods_order_id)
 );
 
@@ -135,7 +136,7 @@ create table pet_info
 (
    pet_id               int not null auto_increment,
    master_id            int,
-   pet_race_id          int,
+   race_id              int,
    pet_name             char(50) not null,
    pet_nickname         char(50),
    pet_sex              char(10),
@@ -172,7 +173,7 @@ create table service_appointment_r
    service_appointment_id int not null auto_increment,
    appointment_id       int,
    service_id           int,
-   finish_status        bool not null,
+   finish_status        int not null,
    finish_time          datetime,
    primary key (service_appointment_id)
 );
@@ -223,7 +224,7 @@ alter table goods_order_r add constraint FK_Reference_9 foreign key (goods_id)
 alter table log_info add constraint FK_Reference_13 foreign key (staff_id)
       references staff_info (staff_id) on delete restrict on update restrict;
 
-alter table pet_info add constraint FK_Reference_14 foreign key (pet_race_id)
+alter table pet_info add constraint FK_Reference_14 foreign key (race_id)
       references pet_race (pet_race_id) on delete restrict on update restrict;
 
 alter table pet_info add constraint FK_Reference_2 foreign key (master_id)
