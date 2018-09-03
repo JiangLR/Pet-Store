@@ -8,6 +8,7 @@
         <id name="goodsOrderId" column="goods_order_id">
             <generator class="increment"/>
         </id>
+        <property name="amount" column="order_goods_amount"/>
         <many-to-one name="goods" column="goods_id" class="cn.edu.zucc.pet_service.model.GoodsEntity"/>
         <many-to-one name="goodsOrder" column="order_id" class="cn.edu.zucc.pet_service.model.GoodsOrderEntity"/>
     </class>

@@ -15,4 +15,7 @@ import java.util.List;
 public interface IGoodsManager {
     public GoodsEntity regGoods(String name, Double price, Double on_sale, Blob barcode, int goods_amount, GoodsRaceEntity goods_race, BrandsEntity brand) throws BaseException;
     public List<GoodsEntity> loadAll();
+    public GoodsEntity loadGoods(int goodsId);
+    public void deleteGoods(GoodsEntity goods) throws BaseException;
+
 }

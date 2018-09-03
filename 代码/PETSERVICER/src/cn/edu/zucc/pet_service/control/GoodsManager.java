@@ -65,6 +65,34 @@ public class GoodsManager implements IGoodsManager {
         Query<GoodsEntity> query = HibernateUtil.openSession().createQuery(hql);
         return query.list();
     }
+
+    @Override
+    public GoodsEntity loadGoods(int goodsId) {
+        String hql = "from GoodsEntity where goodsId = :goodsId";
+        GoodsEntity goods = (GoodsEntity) HibernateUtil.openSession().createQuery(hql)
+                .setParameter("goodsId", goodsId).uniqueResult();
+        return goods;
+    }
+
+    @Override
+    public void deleteGoods(GoodsEntity goods) throws BaseException {
+        if (goods == null)
+            throw new BaseException("此商品不存在");
+        Session session = HibernateUtil.openSession();
+        Transaction tx = null;
+        try {
+            tx = session.beginTransaction();
+            GoodsEntity goodsDelte = session.get(GoodsEntity.class, goods.getGoodsId());
+            session.delete(goodsDelte);
+            tx.commit();
+        } catch (Exception e) {
+            if (tx != null)
+                tx.rollback();
+            throw e;
+        } finally {
+            session.clear();
+        }
+    }
 }
 
 

@@ -154,14 +154,24 @@ public class DAOTest {
 
     @Test
     public void testRegGoodsOrder() {
-        MasterEntity master = new MasterManager().loadMaster(2);
+        MasterEntity master = new MasterManager().loadMaster(1);
+        GoodsEntity goods = new GoodsManager().loadGoods(1);
         try {
-            new GoodsOrderManager().regGoodsOrder(master);
+            new GoodsOrderManager().regGoodsOrder(master, goods, 10);
         } catch (BaseException e) {
             e.printStackTrace();
         }
     }
 
+    @Test
+    public void testDeleteGoods(){
+        GoodsEntity goods = new GoodsManager().loadGoods(1);
+        try {
+            new GoodsManager().deleteGoods(goods);
+        } catch (BaseException e) {
+            e.printStackTrace();
+        }
+    }
 
     public static void main(String[] args) {
     }

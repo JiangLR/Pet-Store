@@ -16,6 +16,7 @@ public class GoodsOrderREntity {
     private int goodsOrderId;
     private GoodsEntity goods;
     private GoodsOrderEntity goodsOrder;
+    private int amount;
 
     @Id
     @Column(name = "goods_order_id")
@@ -50,6 +51,14 @@ public class GoodsOrderREntity {
 
     public void setGoodsOrder(GoodsOrderEntity goodsOrder) {
         this.goodsOrder = goodsOrder;
+    }
+
+    public int getAmount() {
+        return amount;
+    }
+
+    public void setAmount(int amount) {
+        this.amount = amount;
     }
 
     @Override
