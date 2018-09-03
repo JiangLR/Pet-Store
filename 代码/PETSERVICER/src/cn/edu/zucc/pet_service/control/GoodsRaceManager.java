@@ -8,6 +8,7 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 
+import java.sql.SQLInvalidAuthorizationSpecException;
 import java.util.List;
 
 /**
@@ -50,6 +51,8 @@ public class GoodsRaceManager implements IGoodsRaceManager {
         Transaction tx = null;
         try {
             tx = session.beginTransaction();
+            if(goods_race.getGoods().size() != 0)
+                throw new BaseException("该商品类仍有商品正在出售,不能删除");
             session.delete(goods_race);
             tx.commit();
         } catch (Exception e) {

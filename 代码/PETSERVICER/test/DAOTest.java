@@ -2,7 +2,7 @@ import cn.edu.zucc.pet_service.control.*;
 import cn.edu.zucc.pet_service.model.*;
 import cn.edu.zucc.pet_service.util.BaseException;
 import cn.edu.zucc.pet_service.util.HibernateUtil;
-import com.sun.org.apache.xpath.internal.operations.Bool;
+import org.hibernate.Hibernate;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
@@ -10,6 +10,8 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.io.*;
+import java.sql.Blob;
 import java.sql.Timestamp;
 import java.util.Date;
 import java.util.List;
@@ -46,27 +48,18 @@ public class DAOTest {
     }
 
     @Test
-    public void insertPet() {
-        MasterEntity master1 = new MasterEntity();
-        master1.setMasterName("jiangjy");
-        master1.setMasterSex("male");
-        master1.setMasterTel("13738578538");
-        master1.setMasterMail("1024311844@qq.com");
+    public void regPet() {
+        try {
+            MasterEntity master = new MasterManager().loadMaster(1);
+            PetRaceEntity petRace = new PetRaceManager().loadAll();
+            String name = "hashiqi";
+            String sex = "female";
+            String nickName = "yellow";
 
-
-        for (int i = 0; i < 5; i++) {
-            PetEntity pet_i = new PetEntity();
-            pet_i.setMaster(master1);
-            pet_i.setPetName("maomi" + i);
-            pet_i.setPetNickname("yellow" + i);
-            pet_i.setPetRace("cat");
-            pet_i.setPetSex("male");
-
-            master1.getPets().add(pet_i);
-            pet_i.setMaster(master1);
-            session.save(master1);
+            PetEntity newPet = new PetManager().regPet()
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-        tx.commit();
     }
 
     @Test
@@ -85,6 +78,15 @@ public class DAOTest {
         tx.commit();
     }
 
+    @Test
+    public void testDeletePet() {
+
+        try {
+            MasterEntity master = new MasterManager().loadMaster(1);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
     @Test
     public void save_service_appointment() {
@@ -186,22 +188,49 @@ public class DAOTest {
     }
 
     @Test
-    public void query_test2() {
-        StaffEntity staff1 = (StaffEntity) session.get(StaffEntity.class, 1);
-        System.out.println(staff1.toString());
+    public void regGoods() throws IOException {
+        GoodsRaceEntity goods_race = (GoodsRaceEntity) session.createQuery("from GoodsRaceEntity where goodsRaceName = :name")
+                .setParameter("name", "沐浴露").uniqueResult();
+        BrandsEntity brand = (BrandsEntity) session.createQuery("from BrandsEntity where brandsName = :name")
+                .setParameter("name", "雕牌").uniqueResult();
+
+        File file = new File("D:" + File.separator + "Pet-Store" + File.separator + "blob.png");
+        InputStream in = new FileInputStream(file);
+        Blob barCode = Hibernate.getLobCreator(session).createBlob(in, in.available());
+
+        GoodsEntity goods = new GoodsEntity();
+        goods.setGoodsName("男士沐浴露");
+        goods.setGoodsPrice(20.0);
+        goods.setGoodsRace(goods_race);
+        goods.setBrand(brand);
+        goods.setOnSale(0);
+        goods.setGoodsAmount(10);
+        goods.setGoodsBarcode(barCode);
+
+        goods_race.getGoods().add(goods);
+        brand.getGoods().add(goods);
+        session.save(goods);
+        tx.commit();
     }
 
-
     @Test
-    public void test_blob() {
-
+    public void deleteGoodsRace() {
+        GoodsRaceManager goodRaceManager = new GoodsRaceManager();
+        try {
+            List<GoodsRaceEntity> list = goodRaceManager.loadAll();
+            for (GoodsRaceEntity goodRace : list) {
+                goodRaceManager.deleteGoodsRace(goodRace);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @Test
-    public void reg_brand() {
+    public void loadGoodsRace() {
         try {
             List<GoodsRaceEntity> list = new GoodsRaceManager().loadAll();
-            for(GoodsRaceEntity good_race : list){
+            for (GoodsRaceEntity good_race : list) {
                 System.out.println(good_race.toString());
             }
         } catch (BaseException e) {
@@ -209,11 +238,26 @@ public class DAOTest {
         }
     }
 
+    @Test
+    public void regMaster() {
+        String name = "Jbooo";
+        String sex = "male";
+        String tel = "13588899791";
+        String mail = "";
+
+        try {
+            new MasterManager().regMaster(name, sex, tel, mail);
+        } catch (BaseException e) {
+            e.printStackTrace();
+        }
+    }
+
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String name = sc.nextLine();
         try {
-            new BrandManager().reg_brand(name);
+            new BrandManager().regBrand(name);
         } catch (Exception e) {
             e.printStackTrace();
         }

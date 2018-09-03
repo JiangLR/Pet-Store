@@ -5,10 +5,11 @@ import cn.edu.zucc.pet_service.model.MasterEntity;
 import cn.edu.zucc.pet_service.model.PetEntity;
 import cn.edu.zucc.pet_service.util.BaseException;
 import cn.edu.zucc.pet_service.util.HibernateUtil;
-import com.mysql.cj.util.EscapeTokenizer;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
+
+import java.util.List;
 
 
 /**
@@ -17,7 +18,7 @@ import org.hibernate.query.Query;
  */
 public class MasterManager implements IMasterManager {
     @Override
-    public MasterEntity reg_master(String name, String sex, String tel, String mail) throws BaseException {
+    public MasterEntity regMaster(String name, String sex, String tel, String mail) throws BaseException {
         if (name.equals(""))
             throw new BaseException("姓名不能为空");
         if (tel.equals(""))
@@ -42,7 +43,7 @@ public class MasterManager implements IMasterManager {
             if (tx != null) {
                 tx.rollback();
             }
-            e.printStackTrace();
+            throw e;
         } finally {
             session.clear();
         }
@@ -50,41 +51,10 @@ public class MasterManager implements IMasterManager {
     }
 
     @Override
-    public PetEntity reg_pet(String name, String nickname, String sex, MasterEntity master) throws BaseException {
-        if (name.equals(""))
-            throw new BaseException("姓名不能为空");
-
-        PetEntity newpet = new PetEntity();
+    public MasterEntity loadMaster(int master_id) throws BaseException {
         Session session = HibernateUtil.openSession();
         Transaction tx = null;
-        try {
-            tx = session.beginTransaction();
-            newpet.setPetName(name);
-            newpet.setPetNickname(nickname);
-            newpet.setPetSex(sex);
-
-            master.getPets().add(newpet);
-            newpet.setMaster(master);
-
-            session.update(master);
-            tx.commit();
-
-        } catch (Exception e) {
-            if(tx != null){
-                tx.rollback();
-            }
-            e.printStackTrace();
-        } finally {
-            session.clear();
-        }
-        return newpet;
-    }
-
-    @Override
-    public MasterEntity query_master(int master_id) {
-        Session session = HibernateUtil.openSession();
-        Transaction tx =  null;
-        MasterEntity master = new MasterEntity();
+        MasterEntity master;
         try {
             tx = session.beginTransaction();
             String hql = "from MasterEntity where masterId = :master_id";
@@ -94,16 +64,22 @@ public class MasterManager implements IMasterManager {
             if (master == null) {
                 throw new BaseException("此用户不存在");
             }
-
             tx.commit();
-        }catch (Exception e){
-            if(tx != null){
+        } catch (Exception e) {
+            if (tx != null) {
                 tx.rollback();
             }
-            e.printStackTrace();
-        }finally {
+            throw e;
+        } finally {
             session.clear();
         }
         return master;
+    }
+
+    @Override
+    public List<MasterEntity> loadAll() throws BaseException {
+        String hql = "from MasterEntity";
+        Query<MasterEntity> query = HibernateUtil.openSession().createQuery(hql);
+        return query.list();
     }
 }

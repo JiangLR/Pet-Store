@@ -16,7 +16,7 @@ import org.hibernate.query.Query;
  */
 public class BrandManager implements IBrandManager{
     @Override
-    public BrandsEntity reg_brand(String name) throws BaseException{
+    public BrandsEntity regBrand(String name) throws BaseException{
         if(name.equals(""))
             throw new BaseException("品牌名不能为空");
         Session session = HibernateUtil.openSession();

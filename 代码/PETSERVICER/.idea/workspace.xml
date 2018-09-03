@@ -2,81 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3cc5a274-213d-4f9e-93d8-c1393d9f290d" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/../E-R图/pet_store(物理模型).cdm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/PETSERVICER/cn/edu/zucc/pet_service/control/MasterManager.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/PETSERVICER/cn/edu/zucc/pet_service/control/PetRaceManager.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/PETSERVICER/cn/edu/zucc/pet_service/control/StaffManager.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/PETSERVICER/cn/edu/zucc/pet_service/itf/IAppointmentManager.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/PETSERVICER/cn/edu/zucc/pet_service/itf/IBrandManager.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/PETSERVICER/cn/edu/zucc/pet_service/itf/IGoodsManager.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/PETSERVICER/cn/edu/zucc/pet_service/itf/IGoodsOrderManager.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/PETSERVICER/cn/edu/zucc/pet_service/itf/IGoodsRaceManager.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/PETSERVICER/cn/edu/zucc/pet_service/itf/IMasterManager.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/PETSERVICER/cn/edu/zucc/pet_service/itf/IPetManager.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/PETSERVICER/cn/edu/zucc/pet_service/itf/IPetRaceManager.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/PETSERVICER/cn/edu/zucc/pet_service/itf/IServiceManager.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/PETSERVICER/cn/edu/zucc/pet_service/itf/IStaffManager.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/PETSERVICER/cn/edu/zucc/pet_service/model/PetRaceEntity.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/PETSERVICER/cn/edu/zucc/pet_service/model/PetRaceEntity.hbm.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/PETSERVICER/cn/edu/zucc/pet_service/ui/test.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/control/BrandManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/control/GoodsManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/control/GoodsRaceManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/control/MasterManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/control/PetRaceManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/control/StaffManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/itf/IAppointmentManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/itf/IBrandManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/itf/IGoodsManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/itf/IGoodsOrderManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/itf/IGoodsRaceManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/itf/IMasterManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/itf/IPetManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/itf/IPetRaceManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/itf/IServiceManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/itf/IStaffManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/model/PetRaceEntity.hbm.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/model/PetRaceEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E-R图/pet_store.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../E-R图/pet_store.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E-R图/pet_store.pdm" beforeDir="false" afterPath="$PROJECT_DIR$/../E-R图/pet_store.pdm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/04b4f676-e5f4-42ea-8b78-4fa949e6e5eb.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/426fbeae-2477-4f6b-a77e-835c63f956ae.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4a04eb7e-1fd4-4ad4-8965-6a0b36340577.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/579c63a2-7630-41b6-94ba-1eeddafe58ce.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0cfcf7ed-1db5-4ca2-8cb9-a9cd346f43a7.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/60ee102d-e8ad-4f54-9893-848a42eb2be3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6da3656d-4c15-443f-8db5-367a94d74e1c.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/fb32a004-6644-4634-9a29-4cd5f13811ea.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/control/PetManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PETSERVICER.iml" beforeDir="false" afterPath="$PROJECT_DIR$/PETSERVICER.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PETSERVICER/cn/edu/zucc/pet_service/model/GoodsEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PETSERVICER/cn/edu/zucc/pet_service/model/GoodsEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PETSERVICER/cn/edu/zucc/pet_service/model/GoodsEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PETSERVICER/cn/edu/zucc/pet_service/model/GoodsEntity.hbm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PETSERVICER/cn/edu/zucc/pet_service/model/GoodsRaceEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PETSERVICER/cn/edu/zucc/pet_service/model/GoodsRaceEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PETSERVICER/cn/edu/zucc/pet_service/model/GoodsRaceEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PETSERVICER/cn/edu/zucc/pet_service/model/GoodsRaceEntity.hbm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PETSERVICER/cn/edu/zucc/pet_service/model/MasterEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PETSERVICER/cn/edu/zucc/pet_service/model/MasterEntity.hbm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PETSERVICER/cn/edu/zucc/pet_service/model/PetEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PETSERVICER/cn/edu/zucc/pet_service/model/PetEntity.hbm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PETSERVICER/cn/edu/zucc/pet_service/model/StaffEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PETSERVICER/cn/edu/zucc/pet_service/model/StaffEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PETSERVICER/cn/edu/zucc/pet_service/ui/gui_test$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PETSERVICER/cn/edu/zucc/pet_service/ui/gui_test$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PETSERVICER/cn/edu/zucc/pet_service/ui/gui_test$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PETSERVICER/cn/edu/zucc/pet_service/ui/gui_test$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PETSERVICER/cn/edu/zucc/pet_service/ui/gui_test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PETSERVICER/cn/edu/zucc/pet_service/ui/gui_test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PETSERVICER/cn/edu/zucc/pet_service/util/HibernateUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PETSERVICER/cn/edu/zucc/pet_service/util/HibernateUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PETSERVICER/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PETSERVICER/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PETSERVICER/cn/edu/zucc/pet_service/control/BrandManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PETSERVICER/cn/edu/zucc/pet_service/control/BrandManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PETSERVICER/cn/edu/zucc/pet_service/control/GoodsManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PETSERVICER/cn/edu/zucc/pet_service/control/GoodsManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PETSERVICER/cn/edu/zucc/pet_service/control/GoodsRaceManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PETSERVICER/cn/edu/zucc/pet_service/control/GoodsRaceManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PETSERVICER/cn/edu/zucc/pet_service/control/MasterManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PETSERVICER/cn/edu/zucc/pet_service/control/MasterManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PETSERVICER/cn/edu/zucc/pet_service/control/PetRaceManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PETSERVICER/cn/edu/zucc/pet_service/control/PetRaceManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PETSERVICER/cn/edu/zucc/pet_service/itf/IBrandManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PETSERVICER/cn/edu/zucc/pet_service/itf/IBrandManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PETSERVICER/cn/edu/zucc/pet_service/itf/IMasterManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PETSERVICER/cn/edu/zucc/pet_service/itf/IMasterManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PETSERVICER/cn/edu/zucc/pet_service/itf/IPetRaceManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PETSERVICER/cn/edu/zucc/pet_service/itf/IPetRaceManager.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/test/PETSERVICER/DAOTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/PETSERVICER/DAOTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/model/BrandsEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/model/BrandsEntity.hbm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/model/BrandsEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/model/BrandsEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/model/GoodsEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/model/GoodsEntity.hbm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/model/GoodsEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/model/GoodsEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/model/GoodsRaceEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/model/GoodsRaceEntity.hbm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/model/GoodsRaceEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/model/GoodsRaceEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/model/MasterEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/model/MasterEntity.hbm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/model/PetEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/model/PetEntity.hbm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/model/StaffEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/model/StaffEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/ui/gui_test.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/util/HibernateUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/util/HibernateUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/control/BrandManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/control/BrandManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/control/GoodsManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/control/GoodsManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/control/GoodsRaceManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/control/GoodsRaceManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/control/MasterManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/control/MasterManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/control/PetRaceManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/control/PetRaceManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/itf/IBrandManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/itf/IBrandManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/itf/IMasterManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/itf/IMasterManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/itf/IPetManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/itf/IPetManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/itf/IPetRaceManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/itf/IPetRaceManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/DAOTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/DAOTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../数据库/pet_service.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../数据库/pet_service.sql" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -152,24 +98,71 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DAOTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DAOTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/DAOTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="200" column="8" selection-start-line="200" selection-start-column="8" selection-end-line="200" selection-end-column="8" />
+            <state relative-caret-position="107">
+              <caret line="53" column="67" selection-start-line="53" selection-start-column="67" selection-end-line="53" selection-end-column="67" />
+              <folding>
+                <element signature="method#init#0;class#DAOTest#0" />
+                <element signature="method#insert#0;class#DAOTest#0" />
+                <element signature="method#deleteMaster#0;class#DAOTest#0" />
+                <element signature="method#changePet#0;class#DAOTest#0" />
+                <element signature="method#testDeletePet#0;class#DAOTest#0" />
+                <element signature="method#save_service_appointment#0;class#DAOTest#0" />
+                <element signature="method#query_test#0;class#DAOTest#0" />
+                <element signature="method#regGoods#0;class#DAOTest#0" />
+                <element signature="method#deleteGoodsRace#0;class#DAOTest#0" />
+                <element signature="method#loadGoodsRace#0;class#DAOTest#0" />
+                <element signature="method#regMaster#0;class#DAOTest#0" />
+                <element signature="method#main#0;class#DAOTest#0" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GoodsRaceManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cn/edu/zucc/pet_service/control/GoodsRaceManager.java">
+      <file leaf-file-name="PetRaceManager.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/cn/edu/zucc/pet_service/control/PetRaceManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="429">
-              <caret line="67" column="28" lean-forward="true" selection-start-line="67" selection-start-column="28" selection-end-line="67" selection-end-column="28" />
+            <state relative-caret-position="506">
+              <caret line="60" column="8" selection-start-line="60" selection-start-column="8" selection-end-line="60" selection-end-column="8" />
+              <folding>
+                <element signature="method#regPetRace#0;class#PetRaceManager#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IPetManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cn/edu/zucc/pet_service/itf/IPetManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="308">
+              <caret line="18" column="37" lean-forward="true" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#reg_goods_race#0;class#GoodsRaceManager#0" />
-                <element signature="method#delete_goods_race#0;class#GoodsRaceManager#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IPetRaceManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cn/edu/zucc/pet_service/itf/IPetRaceManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="286">
+              <caret line="16" column="48" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PetManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cn/edu/zucc/pet_service/control/PetManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-58">
+              <caret line="24" column="28" lean-forward="true" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#regPet#0;class#PetManager#0" />
+                <element signature="method#deletePet#0;class#PetManager#0" />
               </folding>
             </state>
           </provider>
@@ -178,10 +171,11 @@
       <file leaf-file-name="BrandManager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/cn/edu/zucc/pet_service/control/BrandManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="155">
-              <caret line="25" column="44" selection-start-line="25" selection-start-column="44" selection-end-line="25" selection-end-column="44" />
+            <state relative-caret-position="396">
+              <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#reg_brand#0;class#BrandManager#0" />
               </folding>
             </state>
           </provider>
@@ -190,43 +184,43 @@
       <file leaf-file-name="IBrandManager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/cn/edu/zucc/pet_service/itf/IBrandManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="198">
+              <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hibernate.cfg.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/hibernate.cfg.xml">
+      <file leaf-file-name="MasterManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cn/edu/zucc/pet_service/control/MasterManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="3" column="71" lean-forward="true" selection-start-line="3" selection-start-column="71" selection-end-line="3" selection-end-column="71" />
+            <state relative-caret-position="119">
+              <caret line="50" column="5" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
               <folding>
-                <element signature="e#845#850#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="method#reg_master#0;class#MasterManager#0" />
+                <element signature="method#loadAll#0;class#MasterManager#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IGoodsRaceManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cn/edu/zucc/pet_service/itf/IGoodsRaceManager.java">
+      <file leaf-file-name="IMasterManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cn/edu/zucc/pet_service/itf/IMasterManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="16" column="64" selection-start-line="16" selection-start-column="64" selection-end-line="16" selection-end-column="64" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="242">
+              <caret line="15" column="71" selection-start-line="15" selection-start-column="71" selection-end-line="15" selection-end-column="71" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GoodsManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cn/edu/zucc/pet_service/control/GoodsManager.java">
+      <file leaf-file-name="GoodsRaceManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cn/edu/zucc/pet_service/control/GoodsRaceManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="657">
-              <caret line="49" column="20" selection-start-line="49" selection-start-column="20" selection-end-line="49" selection-end-column="20" />
+            <state relative-caret-position="242">
+              <caret line="61" column="19" lean-forward="true" selection-start-line="61" selection-start-column="19" selection-end-line="61" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#regGoodsRace#0;class#GoodsRaceManager#0" />
               </folding>
             </state>
           </provider>
@@ -255,7 +249,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/model/StaffInfoEntity.hbm.xml" />
         <option value="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/model/PetInfoEntity.java" />
         <option value="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/model/ServiceEntity.java" />
         <option value="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/model/GoodsOrderEntity.hbm.xml" />
@@ -282,30 +275,31 @@
         <option value="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/model/StaffEntity.java" />
         <option value="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/control/StaffManager.java" />
         <option value="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/itf/IStaffManager.java" />
-        <option value="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/itf/IPetManager.java" />
         <option value="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/model/PetEntity.hbm.xml" />
         <option value="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/model/MasterEntity.hbm.xml" />
-        <option value="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/itf/IMasterManager.java" />
-        <option value="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/control/MasterManager.java" />
-        <option value="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/itf/IPetRaceManager.java" />
         <option value="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/model/GoodsRaceEntity.hbm.xml" />
         <option value="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/model/GoodsRaceEntity.java" />
         <option value="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/model/PetRaceEntity.java" />
         <option value="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/model/PetRaceEntity.hbm.xml" />
-        <option value="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/control/PetRaceManager.java" />
         <option value="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/util/HibernateUtil.java" />
-        <option value="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/control/BrandManager.java" />
         <option value="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/itf/IGoodsManager.java" />
         <option value="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/model/BrandsEntity.java" />
         <option value="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/model/GoodsEntity.java" />
         <option value="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/model/GoodsEntity.hbm.xml" />
         <option value="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/model/BrandsEntity.hbm.xml" />
-        <option value="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/control/GoodsManager.java" />
         <option value="$PROJECT_DIR$/src/hibernate.cfg.xml" />
-        <option value="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/itf/IBrandManager.java" />
         <option value="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/itf/IGoodsRaceManager.java" />
+        <option value="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/control/GoodsManager.java" />
         <option value="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/control/GoodsRaceManager.java" />
+        <option value="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/control/BrandManager.java" />
+        <option value="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/itf/IBrandManager.java" />
+        <option value="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/itf/IMasterManager.java" />
+        <option value="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/itf/IPetManager.java" />
+        <option value="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/control/PetManager.java" />
+        <option value="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/control/MasterManager.java" />
         <option value="$PROJECT_DIR$/test/DAOTest.java" />
+        <option value="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/itf/IPetRaceManager.java" />
+        <option value="$PROJECT_DIR$/src/cn/edu/zucc/pet_service/control/PetRaceManager.java" />
       </list>
     </option>
   </component>
@@ -438,25 +432,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.DAOTest.reg_brand">
-    <configuration name="DAOTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="DAOTest" />
-      <module name="PETSERVICER" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-    </configuration>
+  <component name="RunManager" selected="JUnit.DAOTest.regPet">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method>
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DAOTest.query_test2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DAOTest.deleteGoodsRace" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="PETSERVICER" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="DAOTest" />
-      <option name="METHOD_NAME" value="query_test2" />
+      <option name="METHOD_NAME" value="deleteGoodsRace" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="PARAMETERS" />
@@ -467,13 +456,13 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="DAOTest.reg_brand" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DAOTest.regGoods" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="PETSERVICER" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="DAOTest" />
-      <option name="METHOD_NAME" value="reg_brand" />
+      <option name="METHOD_NAME" value="regGoods" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="PARAMETERS" />
@@ -484,13 +473,13 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="DAOTest.reg_test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DAOTest.regMaster" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="PETSERVICER" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="DAOTest" />
-      <option name="METHOD_NAME" value="reg_test" />
+      <option name="METHOD_NAME" value="regMaster" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="PARAMETERS" />
@@ -501,13 +490,30 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="DAOTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DAOTest.regPet" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="PETSERVICER" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="DAOTest" />
-      <option name="METHOD_NAME" value="test" />
+      <option name="METHOD_NAME" value="regPet" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="DAOTest.testDeletePet" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="PETSERVICER" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="DAOTest" />
+      <option name="METHOD_NAME" value="testDeletePet" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="PARAMETERS" />
@@ -563,19 +569,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.DAOTest.reg_test" />
-      <item itemvalue="JUnit.DAOTest.test" />
-      <item itemvalue="Application.DAOTest" />
-      <item itemvalue="JUnit.DAOTest.query_test2" />
-      <item itemvalue="JUnit.DAOTest.reg_brand" />
+      <item itemvalue="JUnit.DAOTest.regGoods" />
+      <item itemvalue="JUnit.DAOTest.deleteGoodsRace" />
+      <item itemvalue="JUnit.DAOTest.regMaster" />
+      <item itemvalue="JUnit.DAOTest.testDeletePet" />
+      <item itemvalue="JUnit.DAOTest.regPet" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.DAOTest.reg_brand" />
-        <item itemvalue="Application.DAOTest" />
-        <item itemvalue="JUnit.DAOTest.query_test2" />
-        <item itemvalue="JUnit.DAOTest.test" />
-        <item itemvalue="JUnit.DAOTest.reg_test" />
+        <item itemvalue="JUnit.DAOTest.regPet" />
+        <item itemvalue="JUnit.DAOTest.testDeletePet" />
+        <item itemvalue="JUnit.DAOTest.regMaster" />
+        <item itemvalue="JUnit.DAOTest.deleteGoodsRace" />
+        <item itemvalue="JUnit.DAOTest.regGoods" />
       </list>
     </recent_temporary>
   </component>
@@ -598,44 +604,44 @@
       <workItem from="1535848113908" duration="8629000" />
       <workItem from="1535876119405" duration="19320000" />
       <workItem from="1535905070836" duration="218000" />
-      <workItem from="1535933959964" duration="9940000" />
+      <workItem from="1535933959964" duration="17717000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="DAOTest_query_test2 - 2018.09.02 at 18h 26m 58s.xml">
-      <configuration name="DAOTest.query_test2" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DAOTest_reg_brand - 2018.09.03 at 10h 06m 13s.xml">
+    <history-entry file="DAOTest_reg_brand - 2018.09.03 at 11h 20m 27s.xml">
       <configuration name="DAOTest.reg_brand" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DAOTest_reg_brand - 2018.09.03 at 10h 07m 26s.xml">
+    <history-entry file="DAOTest_reg_brand - 2018.09.03 at 11h 21m 18s.xml">
       <configuration name="DAOTest.reg_brand" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DAOTest_reg_brand - 2018.09.03 at 10h 07m 47s.xml">
-      <configuration name="DAOTest.reg_brand" configurationId="JUnit" />
+    <history-entry file="DAOTest_regGoods - 2018.09.03 at 13h 55m 14s.xml">
+      <configuration name="DAOTest.regGoods" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DAOTest_reg_brand - 2018.09.03 at 10h 09m 05s.xml">
-      <configuration name="DAOTest.reg_brand" configurationId="JUnit" />
+    <history-entry file="DAOTest_regGoods - 2018.09.03 at 13h 56m 18s.xml">
+      <configuration name="DAOTest.regGoods" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DAOTest_reg_brand - 2018.09.03 at 10h 10m 11s.xml">
-      <configuration name="DAOTest.reg_brand" configurationId="JUnit" />
+    <history-entry file="DAOTest_deleteGoodsRace - 2018.09.03 at 14h 03m 25s.xml">
+      <configuration name="DAOTest.deleteGoodsRace" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DAOTest_reg_brand - 2018.09.03 at 10h 20m 32s.xml">
-      <configuration name="DAOTest.reg_brand" configurationId="JUnit" />
+    <history-entry file="DAOTest_deleteGoodsRace - 2018.09.03 at 14h 04m 04s.xml">
+      <configuration name="DAOTest.deleteGoodsRace" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DAOTest_reg_brand - 2018.09.03 at 10h 23m 01s.xml">
-      <configuration name="DAOTest.reg_brand" configurationId="JUnit" />
+    <history-entry file="DAOTest_regMaster - 2018.09.03 at 14h 19m 56s.xml">
+      <configuration name="DAOTest.regMaster" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DAOTest_reg_brand - 2018.09.03 at 10h 24m 13s.xml">
-      <configuration name="DAOTest.reg_brand" configurationId="JUnit" />
+    <history-entry file="DAOTest_testDeletePet - 2018.09.03 at 14h 36m 20s.xml">
+      <configuration name="DAOTest.testDeletePet" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DAOTest_reg_brand - 2018.09.03 at 10h 24m 57s.xml">
-      <configuration name="DAOTest.reg_brand" configurationId="JUnit" />
+    <history-entry file="DAOTest_regPet - 2018.09.03 at 14h 56m 12s.xml">
+      <configuration name="DAOTest.regPet" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DAOTest_regPet - 2018.09.03 at 14h 56m 34s.xml">
+      <configuration name="DAOTest.regPet" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80601000" />
+    <option name="totallyTimeSpent" value="88378000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -661,12 +667,12 @@
       <window_info anchor="right" id="Maven Projects" order="5" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
       <window_info anchor="bottom" id="Version Control" order="12" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.36041358" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.5110783" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32998884" />
       <window_info id="Capture Tool" order="7" />
       <window_info id="Persistence" order="2" sideWeight="0.32329988" side_tool="true" weight="0.18550107" />
       <window_info id="Designer" order="3" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6767001" visible="true" weight="0.18498659" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6767001" visible="true" weight="0.17225201" />
       <window_info anchor="right" id="Database" order="6" weight="0.18297587" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -691,24 +697,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/cn/edu/zucc/pet_service/control/MasterManager.java</url>
-          <line>20</line>
-          <properties />
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
+      <option name="time" value="3" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/cn/edu/zucc/pet_service/model/PhotosEntity.hbm.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="17" lean-forward="true" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/ed2bb988-7964-418e-b32c-84936b6c444b/console.sql" />
     <entry file="file://$PROJECT_DIR$/src/cn/edu/zucc/pet_service/ui/test.form" />
     <entry file="file://$PROJECT_DIR$/src/cn/edu/zucc/pet_service/ui/test.java" />
@@ -721,7 +713,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cn/edu/zucc/pet_service/itf/IStaffManager.java" />
-    <entry file="file://$PROJECT_DIR$/src/cn/edu/zucc/pet_service/itf/IPetManager.java" />
     <entry file="file://$PROJECT_DIR$/src/cn/edu/zucc/pet_service/itf/IServiceManager.java" />
     <entry file="file://$PROJECT_DIR$/src/cn/edu/zucc/pet_service/model/AppointmentEntity.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -808,9 +799,6 @@
     <entry file="file://$PROJECT_DIR$/src/cn/edu/zucc/pet_service/model/MasterEntity.hbm.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/edu/zucc/pet_service/control/MasterManager.java" />
-    <entry file="file://$PROJECT_DIR$/src/cn/edu/zucc/pet_service/itf/IMasterManager.java" />
-    <entry file="file://$PROJECT_DIR$/src/cn/edu/zucc/pet_service/itf/IPetRaceManager.java" />
     <entry file="file://$PROJECT_DIR$/src/cn/edu/zucc/pet_service/model/ServiceRaceEntity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1239">
@@ -862,13 +850,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/edu/zucc/pet_service/control/PetRaceManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="31" column="14" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/cn/edu/zucc/pet_service/itf/IGoodsManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
@@ -905,34 +886,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/edu/zucc/pet_service/model/GoodsEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="99" column="36" selection-start-line="99" selection-start-column="36" selection-end-line="99" selection-end-column="36" />
-          <folding>
-            <element signature="e#1725#1726#0" expanded="true" />
-            <element signature="e#1761#1762#0" expanded="true" />
-            <element signature="e#1974#1975#0" expanded="true" />
-            <element signature="e#2008#2009#0" expanded="true" />
-            <element signature="e#2059#2060#0" expanded="true" />
-            <element signature="e#2105#2106#0" expanded="true" />
-            <element signature="e#2203#2204#0" expanded="true" />
-            <element signature="e#2251#2252#0" expanded="true" />
-            <element signature="e#2285#2286#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/edu/zucc/pet_service/control/GoodsManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="657">
-          <caret line="49" column="20" selection-start-line="49" selection-start-column="20" selection-end-line="49" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/hibernate.cfg.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -940,23 +893,6 @@
           <folding>
             <element signature="e#845#850#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/edu/zucc/pet_service/control/BrandManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="25" column="44" selection-start-line="25" selection-start-column="44" selection-end-line="25" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/edu/zucc/pet_service/itf/IBrandManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
@@ -970,22 +906,133 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/edu/zucc/pet_service/control/GoodsRaceManager.java">
+    <entry file="file://$PROJECT_DIR$/src/cn/edu/zucc/pet_service/control/GoodsManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="429">
-          <caret line="67" column="28" lean-forward="true" selection-start-line="67" selection-start-column="28" selection-end-line="67" selection-end-column="28" />
+        <state relative-caret-position="239">
+          <caret line="27" column="13" lean-forward="true" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#reg_goods_race#0;class#GoodsRaceManager#0" />
-            <element signature="method#delete_goods_race#0;class#GoodsRaceManager#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/edu/zucc/pet_service/model/GoodsEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="99" column="36" selection-start-line="99" selection-start-column="36" selection-end-line="99" selection-end-column="36" />
+          <folding>
+            <element signature="e#2203#2204#0" expanded="true" />
+            <element signature="e#2251#2252#0" expanded="true" />
+            <element signature="e#2285#2286#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/edu/zucc/pet_service/control/BrandManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#reg_brand#0;class#BrandManager#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/edu/zucc/pet_service/itf/IBrandManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/edu/zucc/pet_service/itf/IMasterManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="15" column="71" selection-start-line="15" selection-start-column="71" selection-end-line="15" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/edu/zucc/pet_service/control/GoodsRaceManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="61" column="19" lean-forward="true" selection-start-line="61" selection-start-column="19" selection-end-line="61" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#regGoodsRace#0;class#GoodsRaceManager#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/edu/zucc/pet_service/control/MasterManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="50" column="5" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#reg_master#0;class#MasterManager#0" />
+            <element signature="method#loadAll#0;class#MasterManager#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/DAOTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="200" column="8" selection-start-line="200" selection-start-column="8" selection-end-line="200" selection-end-column="8" />
+        <state relative-caret-position="107">
+          <caret line="53" column="67" selection-start-line="53" selection-start-column="67" selection-end-line="53" selection-end-column="67" />
+          <folding>
+            <element signature="method#init#0;class#DAOTest#0" />
+            <element signature="method#insert#0;class#DAOTest#0" />
+            <element signature="method#deleteMaster#0;class#DAOTest#0" />
+            <element signature="method#changePet#0;class#DAOTest#0" />
+            <element signature="method#testDeletePet#0;class#DAOTest#0" />
+            <element signature="method#save_service_appointment#0;class#DAOTest#0" />
+            <element signature="method#query_test#0;class#DAOTest#0" />
+            <element signature="method#regGoods#0;class#DAOTest#0" />
+            <element signature="method#deleteGoodsRace#0;class#DAOTest#0" />
+            <element signature="method#loadGoodsRace#0;class#DAOTest#0" />
+            <element signature="method#regMaster#0;class#DAOTest#0" />
+            <element signature="method#main#0;class#DAOTest#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/edu/zucc/pet_service/itf/IPetManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="18" column="37" lean-forward="true" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/edu/zucc/pet_service/control/PetManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-58">
+          <caret line="24" column="28" lean-forward="true" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#regPet#0;class#PetManager#0" />
+            <element signature="method#deletePet#0;class#PetManager#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/edu/zucc/pet_service/itf/IPetRaceManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="16" column="48" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/edu/zucc/pet_service/control/PetRaceManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="60" column="8" selection-start-line="60" selection-start-column="8" selection-end-line="60" selection-end-column="8" />
+          <folding>
+            <element signature="method#regPetRace#0;class#PetRaceManager#0" />
+          </folding>
         </state>
       </provider>
     </entry>

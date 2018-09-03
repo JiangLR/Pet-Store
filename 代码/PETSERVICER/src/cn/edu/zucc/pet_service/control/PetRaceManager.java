@@ -9,6 +9,7 @@ import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 
 import javax.sound.midi.Soundbank;
+import java.util.List;
 
 
 /**
@@ -17,7 +18,7 @@ import javax.sound.midi.Soundbank;
  */
 public class PetRaceManager implements IPetRaceManager {
     @Override
-    public PetRaceEntity reg_pet_race(String name, String describe) throws BaseException {
+    public PetRaceEntity regPetRace(String name, String describe) throws BaseException {
         if (name.equals(""))
             throw new BaseException("宠物类别不能为空");
         Session session = HibernateUtil.openSession();
@@ -40,10 +41,23 @@ public class PetRaceManager implements IPetRaceManager {
             if (tx != null) {
                 tx.rollback();
             }
-            e.printStackTrace();
+            throw e;
         } finally {
             session.clear();
         }
         return new_pet_race;
+    }
+
+    @SuppressWarnings({"unchecked"})
+    @Override
+    public List<PetRaceEntity> loadAll() throws BaseException {
+        String hql = "from PetRaceEntity";
+        Query<PetRaceEntity> query = HibernateUtil.openSession().createQuery(hql);
+        return query.list();
+    }
+
+    @Override
+    public PetRaceEntity loadPetRace(String name) throws BaseException {
+        
     }
 }

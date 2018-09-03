@@ -21,7 +21,7 @@ public class GoodsManager implements IGoodsManager {
     @Override
     public GoodsEntity reg_goods(String name, Float price, Float on_sale, Blob barcode, int goods_amount, GoodsRaceEntity goods_race, BrandsEntity brand) throws BaseException {
         if (name.equals(""))
-            throw new BaseException("宠物类别不能为空");
+            throw new BaseException("商品名称不能为空");
         Session session = HibernateUtil.openSession();
         Transaction tx = null;
         GoodsEntity new_goods = new GoodsEntity();
