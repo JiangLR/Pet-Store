@@ -1,7 +1,9 @@
 package cn.edu.zucc.pet_service.model;
 
 import javax.persistence.*;
+import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
 
 /**
  * @Author JiangLR
@@ -10,38 +12,45 @@ import java.util.Objects;
 @Entity
 @Table(name = "goods_race", schema = "pet_service", catalog = "")
 public class GoodsRaceEntity {
-    private int raceId;
-    private String raceName;
-    private String raceDescribe;
+    private int GoodsRaceId;
+    private String goodsRaceName;
+    private String goodsRaceDescribe;
+    private Set<GoodsEntity> goods = new HashSet<>();
 
-    @Id
-    @Column(name = "race_id")
-    public int getRaceId() {
-        return raceId;
+    public int getGoodsRaceId() {
+        return GoodsRaceId;
     }
 
-    public void setRaceId(int raceId) {
-        this.raceId = raceId;
-    }
-
-    @Basic
-    @Column(name = "race_name")
-    public String getRaceName() {
-        return raceName;
-    }
-
-    public void setRaceName(String raceName) {
-        this.raceName = raceName;
+    public void setGoodsRaceId(int goodsRaceId) {
+        GoodsRaceId = goodsRaceId;
     }
 
     @Basic
-    @Column(name = "race_describe")
-    public String getRaceDescribe() {
-        return raceDescribe;
+    @Column(name = "goods_race_name")
+    public String getGoodsRaceName() {
+        return goodsRaceName;
     }
 
-    public void setRaceDescribe(String raceDescribe) {
-        this.raceDescribe = raceDescribe;
+    public void setGoodsRaceName(String raceName) {
+        this.goodsRaceName = raceName;
+    }
+
+    @Basic
+    @Column(name = "goods_race_describe")
+    public String getGoodsRaceDescribe() {
+        return goodsRaceDescribe;
+    }
+
+    public void setGoodsRaceDescribe(String raceDescribe) {
+        this.goodsRaceDescribe = raceDescribe;
+    }
+
+    public Set<GoodsEntity> getGoods() {
+        return goods;
+    }
+
+    public void setGoods(Set<GoodsEntity> goods) {
+        this.goods = goods;
     }
 
     @Override
@@ -49,22 +58,22 @@ public class GoodsRaceEntity {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         GoodsRaceEntity that = (GoodsRaceEntity) o;
-        return raceId == that.raceId &&
-                Objects.equals(raceName, that.raceName) &&
-                Objects.equals(raceDescribe, that.raceDescribe);
+        return GoodsRaceId == that.GoodsRaceId &&
+                Objects.equals(goodsRaceName, that.goodsRaceName) &&
+                Objects.equals(goodsRaceDescribe, that.goodsRaceDescribe);
     }
 
     @Override
     public String toString() {
         return "GoodsRaceEntity{" +
-                "raceId=" + raceId +
-                ", raceName='" + raceName + '\'' +
-                ", raceDescribe='" + raceDescribe + '\'' +
+                "raceId=" + GoodsRaceId +
+                ", raceName='" + goodsRaceName + '\'' +
+                ", raceDescribe='" + goodsRaceDescribe + '\'' +
                 '}';
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(raceId, raceName, raceDescribe);
+        return Objects.hash(GoodsRaceId, goodsRaceName, goodsRaceDescribe);
     }
 }

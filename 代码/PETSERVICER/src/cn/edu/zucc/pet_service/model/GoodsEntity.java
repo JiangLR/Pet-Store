@@ -1,6 +1,7 @@
 package cn.edu.zucc.pet_service.model;
 
 import javax.persistence.*;
+import java.sql.Blob;
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
@@ -16,7 +17,10 @@ public class GoodsEntity {
     private String goodsName;
     private double goodsPrice;
     private double onSale;
-    private String goodsBarcode;
+    private Blob goodsBarcode;
+    private GoodsRaceEntity goodsRace;
+    private int goodsAmount;
+    private BrandsEntity brand;
     private Set<GoodsOrderEntity> orders = new HashSet<>();
 
     @Id
@@ -61,11 +65,11 @@ public class GoodsEntity {
 
     @Basic
     @Column(name = "goods_barcode")
-    public String getGoodsBarcode() {
+    public Blob getGoodsBarcode() {
         return goodsBarcode;
     }
 
-    public void setGoodsBarcode(String goodsBarcode) {
+    public void setGoodsBarcode(Blob goodsBarcode) {
         this.goodsBarcode = goodsBarcode;
     }
 
@@ -75,6 +79,30 @@ public class GoodsEntity {
 
     public void setOrders(Set<GoodsOrderEntity> orders) {
         this.orders = orders;
+    }
+
+    public GoodsRaceEntity getGoodsRace() {
+        return goodsRace;
+    }
+
+    public void setGoodsRace(GoodsRaceEntity goodsRace) {
+        this.goodsRace = goodsRace;
+    }
+
+    public int getGoodsAmount() {
+        return goodsAmount;
+    }
+
+    public void setGoodsAmount(int goodsAmount) {
+        this.goodsAmount = goodsAmount;
+    }
+
+    public BrandsEntity getBrand() {
+        return brand;
+    }
+
+    public void setBrand(BrandsEntity brand) {
+        this.brand = brand;
     }
 
     @Override

@@ -1,5 +1,8 @@
+import cn.edu.zucc.pet_service.control.*;
 import cn.edu.zucc.pet_service.model.*;
+import cn.edu.zucc.pet_service.util.BaseException;
 import cn.edu.zucc.pet_service.util.HibernateUtil;
+import com.sun.org.apache.xpath.internal.operations.Bool;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
@@ -10,6 +13,7 @@ import org.junit.Test;
 import java.sql.Timestamp;
 import java.util.Date;
 import java.util.List;
+import java.util.Scanner;
 
 /**
  * @Author JiangLR
@@ -81,48 +85,6 @@ public class DAOTest {
         tx.commit();
     }
 
-    @Test
-    public void save_goods_order() {
-        GoodsEntity goods1 = new GoodsEntity();
-        goods1.setGoodsName("maoliang1");
-        goods1.setGoodsPrice(20.0);
-        goods1.setOnSale(0);
-        goods1.setGoodsBarcode("xxxxxxxx");
-
-        GoodsEntity goods2 = new GoodsEntity();
-        goods2.setGoodsName("gouliang1");
-        goods2.setGoodsPrice(30.0);
-        goods2.setOnSale(0);
-        goods2.setGoodsBarcode("xxxxxxxx");
-
-        GoodsOrderEntity order1 = new GoodsOrderEntity();
-        order1.setOrderNum(3);
-        float sum = (float) (goods1.getGoodsPrice() * order1.getOrderNum());
-        order1.setOrderPrice(sum);
-        order1.setOrderStatus((byte) 0);
-
-        GoodsOrderEntity order2 = new GoodsOrderEntity();
-        order2.setOrderNum(2);
-        sum = (float) (goods2.getGoodsPrice() * order2.getOrderNum());
-        order2.setOrderPrice(sum);
-        order2.setOrderStatus((byte) 0);
-
-        goods1.getOrders().add(order1);
-        goods1.getOrders().add(order2);
-        goods2.getOrders().add(order1);
-        goods2.getOrders().add(order2);
-
-
-        order1.getGoods().add(goods1);
-        order1.getGoods().add(goods2);
-        order2.getGoods().add(goods1);
-        order2.getGoods().add(goods2);
-
-        session.save(goods1);
-        session.save(goods2);
-
-        tx.commit();
-    }
 
     @Test
     public void save_service_appointment() {
@@ -153,7 +115,7 @@ public class DAOTest {
         pet2.setMaster(master1);
         session.save(master1);
 
-    //****************************************************************************
+        //****************************************************************************
         AppointmentEntity appointment1 = new AppointmentEntity();
         appointment1.setPet(pet1);
         appointment1.setAppointmentStart(new Timestamp(new Date().getTime()));
@@ -180,25 +142,25 @@ public class DAOTest {
         session.save(service1);
         session.save(service2);
 
-    //****************************************************************************
+        //****************************************************************************
 
         ServiceAppointmentREntity service_appointment1 = new ServiceAppointmentREntity();
-        service_appointment1.setFinishStatus((byte)0);
+        service_appointment1.setFinishStatus((byte) 0);
         service_appointment1.setAppointment(appointment1);
         service_appointment1.setService(service1);
 
         ServiceAppointmentREntity service_appointment2 = new ServiceAppointmentREntity();
-        service_appointment2.setFinishStatus((byte)0);
+        service_appointment2.setFinishStatus((byte) 0);
         service_appointment2.setAppointment(appointment1);
         service_appointment2.setService(service2);
 
         ServiceAppointmentREntity service_appointment3 = new ServiceAppointmentREntity();
-        service_appointment3.setFinishStatus((byte)0);
+        service_appointment3.setFinishStatus((byte) 0);
         service_appointment3.setAppointment(appointment2);
         service_appointment3.setService(service1);
 
         ServiceAppointmentREntity service_appointment4 = new ServiceAppointmentREntity();
-        service_appointment4.setFinishStatus((byte)0);
+        service_appointment4.setFinishStatus((byte) 0);
         service_appointment4.setAppointment(appointment2);
         service_appointment4.setService(service2);
 
@@ -210,16 +172,50 @@ public class DAOTest {
     }
 
     @Test
-    public void query_test(){
+    public void query_test() {
         String hql = "from ServiceRaceEntity where servicePrice < 30";
         Query query = session.createQuery(hql);
-//        List<ServiceRaceEntity> services = query.list();
-//        for(ServiceRaceEntity service : services){
-//            System.out.println(service.toString());
-//        }
+        List<ServiceRaceEntity> services = query.list();
+        for (ServiceRaceEntity service : services) {
+            System.out.println(service.toString());
+        }
         ServiceRaceEntity service1 = (ServiceRaceEntity) query.uniqueResult();
         System.out.println(service1);
 
         tx.commit();
+    }
+
+    @Test
+    public void query_test2() {
+        StaffEntity staff1 = (StaffEntity) session.get(StaffEntity.class, 1);
+        System.out.println(staff1.toString());
+    }
+
+
+    @Test
+    public void test_blob() {
+
+    }
+
+    @Test
+    public void reg_brand() {
+        try {
+            List<GoodsRaceEntity> list = new GoodsRaceManager().loadAll();
+            for(GoodsRaceEntity good_race : list){
+                System.out.println(good_race.toString());
+            }
+        } catch (BaseException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String name = sc.nextLine();
+        try {
+            new BrandManager().reg_brand(name);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

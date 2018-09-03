@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="cn.edu.zucc.pet_service.model.PetRaceEntity" table="pet_race" schema="pet_service">
+        <id name="raceId" column="pet_race_id"/>
+        <property name="petRaceName" column="pet_race_name"/>
+        <property name="petRaceDescribe" column="pet_race_describe"/>
+        <set name="pets" cascade="save-update, delete" inverse="true">
+            <key column="pet_race_id"/>
+            <one-to-many class="cn.edu.zucc.pet_service.model.PetEntity"/>
+        </set>
+    </class>
+</hibernate-mapping>
